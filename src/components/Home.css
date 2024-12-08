@@ -1,0 +1,408 @@
+/* start home css */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #110064, #4ca0c7); /* Gradient Background */
+}
+
+.about-page {
+    background: white; /* Set white background for About page */
+}
+
+.projects-page {
+    background: white;
+}
+  
+  
+.home {
+  line-height: 1.6;
+}
+
+/* Hidden State */
+.hidden {
+  opacity: 0; /* Fully transparent */
+  visibility: hidden; /* Prevent from being visually displayed */
+}
+
+/* Animation Keyframes */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px); /* Slide in from the left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* End at normal position */
+  }
+}
+
+/* Animation class */
+.animate {
+  animation: fadeSlideIn 1.25s ease-out forwards; /* Play animation */
+  opacity: 1;
+  visibility: visible; /* Ensure element is visible after animation */
+}
+
+  
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #110064, #4ca0c7); /* Gradient Background */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: white;
+  padding: 20px;
+  z-index: 1; /* Ensures it doesn't overlap the navbar */
+
+}
+  
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%; /* Control width of hero section */
+  max-width: 1200px;
+}
+
+.hero-text {
+  flex: 1; /* Allocate space for text */
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  margin: 0 0 20px 0;
+  font-weight: bold;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+}
+  
+.hero-image {
+  flex: 1; /* Allocate space for image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 500px; /* Adjust image size */
+  height: 500px;
+  border-radius: 25%; /* Circular image */
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* why section */
+.why {
+  position: relative; /* Ensure proper positioning */
+  padding: 40px 60px; /* Add spacing inside the section */
+  background: linear-gradient(to right, #000000, #818181); /* Gradient Background */
+  color: white; /* White text */
+  text-align: center; /* Center-align text */
+  border-radius: 24px; /* Rounded corners for the box */
+  margin: 100px auto; /* Center the box horizontally */
+  max-width: 800px; /* Limit the width of the box */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+
+.why-wrapper {
+  background: white; /* Set the background behind this section to white */
+  padding: 30px 0; /* Add spacing above and below */
+}
+
+.why p {
+  font-size: 20px;
+}
+
+/* Sections besides Hero */
+section {
+  padding: 60px 20px;
+  text-align: center;
+  background: white;
+}
+
+
+.contact {
+  margin-top: 20px;
+  padding: 30px 100px;
+}
+
+
+.contact {
+  background-color: #222;
+  color: white;
+  padding-bottom: 0px;
+  padding: 1px 0;
+}
+
+/* About Section */
+.about {
+  background: white; /* Set white background for the section */
+  padding: 80px 30px;
+  display: flex;
+  justify-content: flex-start; /* Aligns items to the left */
+  align-items: flex-start; /* Aligns the image to the top of the section */
+}
+
+.about-content {
+  display: flex;
+  justify-content: center; /* Center align the content */
+  align-items: center;
+  max-width: 1330px;
+  margin: 0 auto; /* Center the entire section horizontally */
+}
+
+.about-text-container {
+    flex: 1; 
+    color: white;
+    background: linear-gradient(to right, #110064, #4ca0c7); /* Gradient Background */
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transform: scale(.9);
+    margin-left: 25px;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.6; /* Adjust line height for better readability */
+}
+  
+.about-image {
+  flex: 1; /* Allocate space for the image */
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 500px;
+  height: 700px;
+  border-radius: 30px; /* Circular image */
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about h2, .projects h2, .contact h2, .education h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about p, .projects p {
+  font-size: 1.4rem;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* education section */
+.education {
+  background: white; /* Set white background for the section */
+  background-color: white; /* Set white background for About section */
+
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.education-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1315px;
+  gap: 100px; /* Add spacing between text and image */
+}
+
+.education-text-container {
+  flex-grow: 0; /* Prevent the container from growing too much */
+  width: 1200px; /* Control the width explicitly */
+  height: 80%;
+  color: white;
+  background: linear-gradient(to right, #003594, #FFB81C); /* Gradient Background */
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transform: scale(1);
+}
+
+.education-text {
+  font-size: 1.2rem;
+  line-height: 1.6; /* Adjust line height for better readability */
+}
+
+.education-image {
+  flex: 1; /* Allocate space for the image */
+  display: flex;
+  justify-content: center;
+  margin-left: 0px; /* Add spacing to the left of the image */
+}
+
+.education-image img {
+  width: 400px;
+  height: 600px;
+  border-radius: 30px; /* Circular image */
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.education p {
+  font-size: 1.65rem;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* project section */
+.projects {
+  background-color: white;
+  padding-bottom: 80px;
+  margin-top: 0px;
+  margin-bottom: 70px;
+  padding: 30px 100px;
+  color: black;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 30px;
+  margin-top: 55px;
+}
+
+.project-card {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out; /* Hover effect */
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Enlarge card on hover */
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.project-card a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  text-decoration: none;
+}
+
+/* Modal (Popup) Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  color: black;
+  overflow: hidden; /* Disable scrolling */
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 60%; /* Adjust width */
+  max-width: 1200px; /* Larger width for better visibility */
+  height: auto; /* Adjust height based on content */
+  overflow: hidden; /* Ensure no scrolling within modal */
+  text-align: center;
+  position: relative;
+  color: black;
+  box-sizing: border-box; /* Include padding in width/height */
+}
+
+.modal-content h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: black;
+}
+
+.modal-image {
+  width: 700px;
+  height: 700px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column; /* Stack image and text vertically */
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-bottom: 20px;
+  }
+
+  .hero-image img {
+    width: 200px; /* Adjust size for smaller screens */
+    height: 200px;
+  }
+}
+/* end home CSS */

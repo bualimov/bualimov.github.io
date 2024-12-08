@@ -1,0 +1,74 @@
+/* start css file */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap');
+
+html {
+  overflow-y: scroll; /* Ensures a vertical scrollbar is always present */
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: rgba(20, 17, 39, 0.9);
+  color: white;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* footer section */
+.footer {
+  background-color: #222; /* Dark background */
+  color: white; /* White text */
+  text-align: center; /* Center-align everything */
+  padding: 50px; /* Add spacing */
+}
+
+.footer-icons {
+  margin-bottom: 20px; /* Add some space between icons and text */
+}
+
+.footer-icons a {
+  margin: 0 10px; /* Space between icons */
+  display: inline-block;
+}
+
+.footer-icons img {
+  width: 30px; /* Icon size */
+  height: 30px;
+  filter: invert(1); /* Make icons white (useful for dark themes) */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-icons a:hover img {
+  transform: scale(1.2); /* Enlarge icon on hover */
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer-icons i {
+  font-size: 30px; /* Icon size */
+  margin: 0 10px; /* Space between icons */
+  color: white; /* Icon color */
+  transition: transform 0.3s ease;
+}
+
+.footer-icons .github:hover i {
+  transform: scale(1.2);
+  color: #f39c12; /* Orange for GitHub */
+}
+
+.footer-icons .linkedin:hover i {
+  transform: scale(1.2);
+  color: #164dd8; /* Blue for LinkedIn */
+}
+
+
+

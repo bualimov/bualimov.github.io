@@ -1,0 +1,78 @@
+/* Navbar.css */
+
+/* Logo Styling */
+.navbar-logo {
+  margin-right: auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-logo-link {
+  color: black;
+  text-decoration: none;
+}
+
+/* Updated Navbar Styles */
+.navbar {
+  background-color: rgba(234, 234, 234, 0.9);
+  color: rgb(0, 0, 0);
+  padding: 0 100px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(1px);
+  border-bottom: 3px solid black;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* Add a grey highlight box */
+.navbar-item {
+  margin: 0 10px;
+  padding: 5px 10px; /* Add padding for the highlight */
+  border-radius: 5px; /* Rounded corners for the highlight box */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Highlight effect on hover */
+.navbar-item:hover {
+  background-color: rgba(117, 117, 117, 0.7); /* Darker grey on hover */
+}
+
+
+/* Ensure text color is applied */
+.navbar-link {
+  color: rgb(0, 0, 0);  /* Force text color */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease; /* Added transition for smooth effect */
+}
+
+.navbar-link:hover {
+  transform: scale(1.2); /* Adjusted scale for a more subtle effect */
+}
+
+.navbar-link:active {
+  color: grey;
+  transform: scale(1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-item {
+    margin: 10px 0;
+  }
+}
