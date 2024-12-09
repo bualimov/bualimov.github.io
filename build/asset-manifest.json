@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e612538d.css",
+    "main.js": "/static/js/main.5c5444ce.js",
+    "static/js/453.2ea3583c.chunk.js": "/static/js/453.2ea3583c.chunk.js",
+    "static/media/baha_pic.png": "/static/media/baha_pic.3ede33ac9bda19671e7f.png",
+    "static/media/baha_ressi.jpeg": "/static/media/baha_ressi.f234e2048d16b4d45e91.jpeg",
+    "static/media/website_cover.jpg": "/static/media/website_cover.f2f58b3889c1d6d97fe3.jpg",
+    "static/media/cathedral.jpg": "/static/media/cathedral.5c9979b02ef7e2de6931.jpg",
+    "static/media/sportsinjuries_cover.png": "/static/media/sportsinjuries_cover.31cc9cae93dda426995c.png",
+    "static/media/pghsports_cover.png": "/static/media/pghsports_cover.ec203a61570d3f1ed1fd.png",
+    "static/media/databowl_cover.png": "/static/media/databowl_cover.fd2db8af97c24e73c78a.png",
+    "static/media/chessplayers_cover.png": "/static/media/chessplayers_cover.67b289953ccccf95a4f4.png",
+    "static/media/javastudytool_cover.png": "/static/media/javastudytool_cover.b0ec1e99268653290684.png",
+    "index.html": "/index.html",
+    "main.e612538d.css.map": "/static/css/main.e612538d.css.map",
+    "main.5c5444ce.js.map": "/static/js/main.5c5444ce.js.map",
+    "453.2ea3583c.chunk.js.map": "/static/js/453.2ea3583c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e612538d.css",
+    "static/js/main.5c5444ce.js"
+  ]
+}
