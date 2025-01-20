@@ -16,13 +16,13 @@ function App() {
   ];
 
   return (
-    <div className="relative">
+    <div className="min-h-screen w-screen bg-dark">
       {/* Navbar */}
-      <nav className="fixed top-0 w-full bg-white shadow-md z-50">
-        <div className="container mx-auto px-6 py-4">
+      <nav className="fixed top-0 left-0 right-0 bg-dark-accent shadow-lg z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-xl font-bold">Your Name</div>
-            <div className="hidden md:flex space-x-8">
+            <div className="text-xl font-bold text-white">Bakhtiyor Alimov</div>
+            <div className="hidden md:flex items-center justify-center space-x-8">
               {navItems.map((item) => (
                 <Link
                   key={item.id}
@@ -31,7 +31,7 @@ function App() {
                   smooth={true}
                   offset={-70}
                   duration={500}
-                  className="cursor-pointer hover:text-blue-600 transition-colors"
+                  className="text-white cursor-pointer hover:text-accent-blue transition-colors"
                 >
                   {item.label}
                 </Link>
@@ -42,20 +42,20 @@ function App() {
       </nav>
 
       {/* Main Content */}
-      <main className="pt-16">
+      <main className="w-full">
         {/* Home Section */}
-        <section id="home" className="min-h-screen bg-gray-50 flex items-center">
-          <div className="container mx-auto px-6 py-20">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to My Portfolio</h1>
-            <p className="text-xl text-gray-600">CS Student at University of Pittsburgh</p>
+        <section id="home" className="h-screen w-full bg-dark flex items-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">Bakhtiyor Alimov</h1>
+            <p className="text-xl text-gray-300">Studying CS@Pitt<br></br> Passionate Creator</p>
           </div>
         </section>
 
         {/* About Section */}
-        <section id="about" className="min-h-screen bg-white flex items-center">
-          <div className="container mx-auto px-6 py-20">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8">About Me</h2>
-            <p className="text-lg text-gray-600">
+        <section id="about" className="h-screen w-full bg-dark-accent flex items-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">About Me</h2>
+            <p className="text-lg text-gray-300">
               I'm a sophomore at the University of Pittsburgh, majoring in Computer Science
               with a minor in Economics. I'm passionate about technology and always eager
               to learn new things.
@@ -64,36 +64,36 @@ function App() {
         </section>
 
         {/* Education Section */}
-        <section id="education" className="min-h-screen bg-gray-50 flex items-center">
-          <div className="container mx-auto px-6 py-20">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8">Education</h2>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold">University of Pittsburgh</h3>
-              <p className="text-gray-600">BS in Computer Science</p>
-              <p className="text-gray-600">Minor in Economics</p>
+        <section id="education" className="h-screen w-full bg-dark flex items-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">Education</h2>
+            <div className="bg-dark-accent p-6 rounded-lg shadow-xl">
+              <h3 className="text-xl font-bold text-white">University of Pittsburgh</h3>
+              <p className="text-gray-300">BS in Computer Science</p>
+              <p className="text-gray-300">Minor in Economics</p>
             </div>
           </div>
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="min-h-screen bg-white flex items-center">
-          <div className="container mx-auto px-6 py-20">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8">Projects</h2>
+        <section id="projects" className="h-screen w-full bg-dark-accent flex items-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Add your projects here */}
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold mb-2">Project 1</h3>
-                <p className="text-gray-600">Description of your project goes here</p>
+              <div className="bg-dark p-6 rounded-lg shadow-xl border border-accent-blue/20">
+                <h3 className="text-xl font-bold mb-2 text-white">Project 1</h3>
+                <p className="text-gray-300">Description of your project goes here</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="min-h-screen bg-gray-50 flex items-center">
-          <div className="container mx-auto px-6 py-20">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8">Contact</h2>
-            <p className="text-lg text-gray-600">
+        <section id="contact" className="h-screen w-full bg-dark flex items-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">Contact</h2>
+            <p className="text-lg text-gray-300">
               Feel free to reach out to me for any opportunities or collaborations.
             </p>
             {/* Add your contact information or form here */}
