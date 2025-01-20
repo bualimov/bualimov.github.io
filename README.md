@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-This is a personal portfolio website built with React, Vite, and Tailwind CSS. It features a modern, responsive design with smooth scrolling navigation.
+Hi! This is a personal portfolio website built with React, Vite, and Tailwind CSS. It features a modern, responsive design with smooth scrolling navigation.
 
 ## Features
 
