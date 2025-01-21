@@ -9,7 +9,10 @@ export default {
       colors: {
         'dark': '#121212',
         'dark-accent': '#1E1E1E',
-        'accent-blue': '#2563eb',
+        'accent-blue': '#00BFFF',
+      },
+      fontFamily: {
+        'raleway': ['Raleway', 'sans-serif'],
       },
     },
   },

@@ -18,8 +18,8 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen w-screen bg-dark">
-      {/* Navbar - increased height with py-6 */}
+    <div className="min-h-screen w-screen bg-dark font-raleway">
+      {/* Navbar */}
       <nav className="fixed top-0 left-0 right-0 bg-dark-accent shadow-lg z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
@@ -33,7 +33,7 @@ function App() {
                   smooth={true}
                   offset={-70}
                   duration={500}
-                  className="text-lg text-white cursor-pointer hover:text-accent-blue transition-colors squiggly-hover"
+                  className="text-lg text-white cursor-pointer hover:text-accent-blue transition-colors"
                 >
                   {item.label}
                 </Link>
@@ -78,14 +78,14 @@ function App() {
                 </div>
               </div>
               
-              {/* Right side - Image - increased size further */}
+              {/* Right side - Image */}
               <div className="w-full md:w-1/2 flex justify-center md:justify-end">
                 <div className="relative w-80 h-80 md:w-[28rem] md:h-[28rem]">
-                  <div className="absolute inset-0 bg-accent-blue/20 rounded-2xl transform rotate-6"></div>
+                  <div className="absolute inset-0 bg-accent-blue/30 rounded-2xl transform rotate-6"></div>
                   <img 
                     src={profilePic} 
                     alt="Bakhtiyor Alimov"
-                    className="relative z-10 w-full h-full object-cover rounded-2xl border-2 border-accent-blue/40 shadow-xl"
+                    className="relative z-10 w-full h-full object-cover rounded-2xl border-2 border-accent-blue/50 shadow-xl"
                   />
                 </div>
               </div>
@@ -123,7 +123,7 @@ function App() {
             <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Add your projects here */}
-              <div className="bg-dark p-6 rounded-lg shadow-xl border border-accent-blue/20">
+              <div className="bg-dark p-6 rounded-lg shadow-xl border border-accent-blue/30">
                 <h3 className="text-xl font-bold mb-2 text-white">Project 1</h3>
                 <p className="text-gray-300">Description of your project goes here</p>
               </div>
