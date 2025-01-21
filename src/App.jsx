@@ -4,17 +4,18 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import profilePic from './assets/profile.jpg'
 import { FaGithub, FaLinkedin } from 'react-icons/fa6'
+import cathedral from './assets/cathedral.jpg'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
   const navItems = [
-    { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'education', label: 'Education' },
     { id: 'projects', label: 'Projects' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'skills', label: 'Skills' },
   ];
 
   return (
@@ -23,7 +24,16 @@ function App() {
       <nav className="fixed top-0 left-0 right-0 bg-dark-accent shadow-lg z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-white">Bakhtiyor Alimov</div>
+            <Link
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="nav-link text-2xl font-bold text-white cursor-pointer hover:text-accent-blue transition-colors"
+            >
+              Bakhtiyor Alimov
+            </Link>
             <div className="hidden md:flex items-center justify-center space-x-8">
               {navItems.map((item) => (
                 <Link
@@ -33,7 +43,8 @@ function App() {
                   smooth={true}
                   offset={-70}
                   duration={500}
-                  className="text-lg text-white cursor-pointer hover:text-accent-blue transition-colors"
+                  activeClass="active"
+                  className="nav-link text-lg text-white cursor-pointer hover:text-accent-blue transition-colors"
                 >
                   {item.label}
                 </Link>
@@ -81,11 +92,11 @@ function App() {
               {/* Right side - Image */}
               <div className="w-full md:w-1/2 flex justify-center md:justify-end">
                 <div className="relative w-80 h-80 md:w-[28rem] md:h-[28rem]">
-                  <div className="absolute inset-0 bg-accent-blue/30 rounded-2xl transform rotate-6"></div>
+                  <div className="absolute inset-0 bg-accent-blue/20 rounded-2xl transform rotate-6"></div>
                   <img 
                     src={profilePic} 
                     alt="Bakhtiyor Alimov"
-                    className="relative z-10 w-full h-full object-cover rounded-2xl border-2 border-accent-blue/50 shadow-xl"
+                    className="relative z-10 w-full h-full object-cover rounded-2xl border-2 border-accent-blue/20 shadow-xl"
                   />
                 </div>
               </div>
@@ -121,11 +132,54 @@ function App() {
         {/* Education Section */}
         <section id="education" className="h-screen w-full bg-dark flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">Education</h2>
-            <div className="bg-dark-accent p-6 rounded-lg shadow-xl">
-              <h3 className="text-xl font-bold text-white">University of Pittsburgh</h3>
-              <p className="text-gray-300">BS in Computer Science</p>
-              <p className="text-gray-300">Minor in Economics</p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white text-center">Education 👨‍🎓</h2>
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+              {/* Left side - Cathedral Image */}
+              <div className="w-full md:w-1/2 flex justify-center md:justify-start">
+                <div className="relative w-72 h-96 md:w-[24rem] md:h-[32rem]">
+                  <div className="absolute inset-0 bg-pitt-gold/30 rounded-2xl transform -rotate-6"></div>
+                  <img 
+                    src={cathedral} 
+                    alt="Cathedral of Learning"
+                    className="relative z-10 w-full h-full object-cover rounded-2xl border-2 border-pitt-gold/50 shadow-xl"
+                  />
+                </div>
+              </div>
+
+              {/* Right side - Education Details */}
+              <div className="w-full md:w-1/2">
+                <div className="space-y-6">
+                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl">
+                    <h3 className="text-xl font-bold text-white mb-2">University of Pittsburgh</h3>
+                    <div className="text-lg text-gray-300 space-y-1">
+                      <p>BS in Computer Science</p>
+                      <p>Minor in Economics</p>
+                      <p>Pitt Honors Degree</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl">
+                    <h3 className="text-xl font-bold text-white mb-3">Coursework</h3>
+                    <div className="text-lg text-gray-300 space-y-1">
+                      <p>• Data Structures & Algorithms</p>
+                      <p>• Advanced Programming</p>
+                      <p>• Discrete Structures</p>
+                      <p>• Computer Organization & Assembly Language</p>
+                      <p>• Systems Software</p>
+                      <p>• Economics</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl">
+                    <h3 className="text-xl font-bold text-white mb-3">Clubs</h3>
+                    <div className="text-lg text-gray-300 space-y-1">
+                      <p>• Computer Science Club</p>
+                      <p>• Panther Equity (Investment Fund)</p>
+                      <p>• Chess Club</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -133,7 +187,7 @@ function App() {
         {/* Projects Section */}
         <section id="projects" className="h-screen w-full bg-dark-accent flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">Projects</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">Projects 📝</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Add your projects here */}
               <div className="bg-dark p-6 rounded-lg shadow-xl border border-accent-blue/30">
@@ -144,16 +198,182 @@ function App() {
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section id="contact" className="h-screen w-full bg-dark flex items-center">
+        {/* Experience Section */}
+        <section id="experience" className="min-h-screen w-full bg-dark flex items-center py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">Contact</h2>
-            <p className="text-lg text-gray-300">
-              Feel free to reach out to me for any opportunities or collaborations.
-            </p>
-            {/* Add your contact information or form here */}
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white text-center">Experience 💼</h2>
+            
+            {/* Timeline */}
+            <div className="relative">
+              {/* Vertical Line */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-pitt-gold/30"></div>
+              
+              {/* Timeline Items */}
+              <div className="space-y-12">
+                {/* Current - Peer Tutor */}
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 md:pr-8 md:text-right">
+                    <div className="bg-dark p-6 rounded-lg shadow-xl">
+                      <h3 className="text-xl font-bold text-white mb-2">Peer Tutor</h3>
+                      <p className="text-lg text-gray-300">University of Pittsburgh</p>
+                      <p className="text-sm text-pitt-gold mb-3">June 2024 - Present</p>
+                      <p className="text-gray-300">Led 50+ sessions on algorithms & data structures using Python & Java, enhancing students' understanding and confidence. Guided students in resolving programming challenges & enhanced coding skills using VSCode.</p>
+                    </div>
+                  </div>
+                  <div className="mx-auto md:mx-0 w-4 h-4 bg-pitt-gold rounded-full relative z-10"></div>
+                  <div className="md:w-1/2 md:pl-8"></div>
+                </div>
+
+                {/* Raising Cane's */}
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 md:pr-8"></div>
+                  <div className="mx-auto md:mx-0 w-4 h-4 bg-pitt-gold rounded-full relative z-10"></div>
+                  <div className="md:w-1/2 md:pl-8">
+                    <div className="bg-dark p-6 rounded-lg shadow-xl">
+                      <h3 className="text-xl font-bold text-white mb-2">Certified Trainer & Shift Supervisor</h3>
+                      <p className="text-lg text-gray-300">Raising Cane's</p>
+                      <p className="text-sm text-pitt-gold mb-3">January 2024 - March 2024</p>
+                      <p className="text-gray-300">Identified as a high-potential employee and fast-tracked for a managerial role. Routinely trained team members on crew member tasks while maintaining operational efficiency and customer satisfaction.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Junior Analyst */}
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 md:pr-8 md:text-right">
+                    <div className="bg-dark p-6 rounded-lg shadow-xl">
+                      <h3 className="text-xl font-bold text-white mb-2">Junior Analyst</h3>
+                      <p className="text-lg text-gray-300">Panther Equity</p>
+                      <p className="text-sm text-pitt-gold mb-3">September 2023 - Present</p>
+                      <p className="text-gray-300">Utilized Excel & financial modeling tools to assess investment opportunities, performing quantitative analysis. Prepared reports and presentations analyzing activity & trends in the stock market.</p>
+                    </div>
+                  </div>
+                  <div className="mx-auto md:mx-0 w-4 h-4 bg-pitt-gold rounded-full relative z-10"></div>
+                  <div className="md:w-1/2 md:pl-8"></div>
+                </div>
+
+                {/* Golden Oaks */}
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 md:pr-8"></div>
+                  <div className="mx-auto md:mx-0 w-4 h-4 bg-pitt-gold rounded-full relative z-10"></div>
+                  <div className="md:w-1/2 md:pl-8">
+                    <div className="bg-dark p-6 rounded-lg shadow-xl">
+                      <h3 className="text-xl font-bold text-white mb-2">President</h3>
+                      <p className="text-lg text-gray-300">Golden Oaks Designs</p>
+                      <p className="text-sm text-pitt-gold mb-3">May 2023 - June 2023</p>
+                      <p className="text-gray-300">Led production to a record sales year, increasing revenue by 30% through designing best-selling wooden pens. Managed business operations within a collaborative team, overseeing product development and marketing.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Salvation Army */}
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 md:pr-8 md:text-right">
+                    <div className="bg-dark p-6 rounded-lg shadow-xl">
+                      <h3 className="text-xl font-bold text-white mb-2">Volunteer Operations Manager</h3>
+                      <p className="text-lg text-gray-300">Pittsburgh Salvation Army</p>
+                      <p className="text-sm text-pitt-gold mb-3">2021 - August 2022</p>
+                      <p className="text-gray-300">Maintained warm, welcoming atmosphere aligned with organization's standards. Actively participated in clothing donations and inventory management, providing essential services to the community.</p>
+                    </div>
+                  </div>
+                  <div className="mx-auto md:mx-0 w-4 h-4 bg-pitt-gold rounded-full relative z-10"></div>
+                  <div className="md:w-1/2 md:pl-8"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
+
+        {/* Skills Section */}
+        <section id="skills" className="min-h-screen w-full bg-dark-accent flex items-center py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <h2 className="text-3xl md:text-5xl font-bold mb-12 text-white text-center">Skills 🛠️</h2>
+            
+            <div className="space-y-12">
+              {/* Languages */}
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">Languages</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" className="w-16 h-16 mb-3" alt="Java" />
+                    <span className="text-white">Java</span>
+                  </div>
+                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" className="w-16 h-16 mb-3" alt="Python" />
+                    <span className="text-white">Python</span>
+                  </div>
+                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="w-16 h-16 mb-3" alt="JavaScript" />
+                    <span className="text-white">JavaScript</span>
+                  </div>
+                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" className="w-16 h-16 mb-3" alt="C++" />
+                    <span className="text-white">C++</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Data */}
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">Data</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" className="w-16 h-16 mb-3" alt="NumPy" />
+                    <span className="text-white">NumPy</span>
+                  </div>
+                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" className="w-16 h-16 mb-3" alt="Pandas" />
+                    <span className="text-white">Pandas</span>
+                  </div>
+                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" className="w-16 h-16 mb-3" alt="SQL" />
+                    <span className="text-white">SQL</span>
+                  </div>
+                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
+                    <img src="https://cdn.plot.ly/plotly-2.27.0.logo.png" className="w-16 h-16 mb-3" alt="Plotly" />
+                    <span className="text-white">Plotly</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Frameworks */}
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">Frameworks</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="w-16 h-16 mb-3" alt="React" />
+                    <span className="text-white">React</span>
+                  </div>
+                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" className="w-16 h-16 mb-3" alt="Django" />
+                    <span className="text-white">Django</span>
+                  </div>
+                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" className="w-16 h-16 mb-3" alt="Flask" />
+                    <span className="text-white">Flask</span>
+                  </div>
+                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" className="w-16 h-16 mb-3" alt="Spring" />
+                    <span className="text-white">Spring</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="w-full bg-dark py-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p className="text-white mb-2">© 2025 Bakhtiyor Alimov. All rights reserved.</p>
+            <p className="text-sm text-gray-400">
+              Contact me at{' '}
+              <a href="mailto:baa160@pitt.edu" className="text-accent-blue hover:text-accent-blue/80">
+                baa160@pitt.edu
+              </a>
+            </p>
+          </div>
+        </footer>
       </main>
     </div>
   )
