@@ -2,6 +2,8 @@ import { Link } from 'react-scroll'
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import profilePic from './assets/profile.jpg'
+import { FaGithub, FaLinkedin } from 'react-icons/fa6'
 import './App.css'
 
 function App() {
@@ -17,11 +19,11 @@ function App() {
 
   return (
     <div className="min-h-screen w-screen bg-dark">
-      {/* Navbar */}
+      {/* Navbar - increased height with py-6 */}
       <nav className="fixed top-0 left-0 right-0 bg-dark-accent shadow-lg z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
-            <div className="text-xl font-bold text-white">Bakhtiyor Alimov</div>
+            <div className="text-2xl font-bold text-white">Bakhtiyor Alimov</div>
             <div className="hidden md:flex items-center justify-center space-x-8">
               {navItems.map((item) => (
                 <Link
@@ -31,7 +33,7 @@ function App() {
                   smooth={true}
                   offset={-70}
                   duration={500}
-                  className="text-white cursor-pointer hover:text-accent-blue transition-colors"
+                  className="text-lg text-white cursor-pointer hover:text-accent-blue transition-colors squiggly-hover"
                 >
                   {item.label}
                 </Link>
@@ -46,8 +48,48 @@ function App() {
         {/* Home Section */}
         <section id="home" className="h-screen w-full bg-dark flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">Bakhtiyor Alimov</h1>
-            <p className="text-xl text-gray-300">Studying CS@Pitt<br></br> Passionate Creator</p>
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+              {/* Left side - Text */}
+              <div className="w-full md:w-1/2 flex flex-col items-center text-center">
+                <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Hi, I'm Bakhtiyor!</h1>
+                <p className="text-2xl md:text-3xl text-gray-300 mb-8">
+                  Studying CS@Pitt
+                  <br />
+                  Passionate Creator
+                </p>
+                {/* Social Icons - centered */}
+                <div className="flex justify-center space-x-6">
+                  <a 
+                    href="https://www.linkedin.com/in/bualimov/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="transform transition-transform hover:scale-110"
+                  >
+                    <FaLinkedin className="w-10 h-10 text-[#0077b5]" />
+                  </a>
+                  <a 
+                    href="https://github.com/bualimov" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="transform transition-transform hover:scale-110"
+                  >
+                    <FaGithub className="w-10 h-10 text-[#f4511e]" />
+                  </a>
+                </div>
+              </div>
+              
+              {/* Right side - Image - increased size further */}
+              <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+                <div className="relative w-80 h-80 md:w-[28rem] md:h-[28rem]">
+                  <div className="absolute inset-0 bg-accent-blue/20 rounded-2xl transform rotate-6"></div>
+                  <img 
+                    src={profilePic} 
+                    alt="Bakhtiyor Alimov"
+                    className="relative z-10 w-full h-full object-cover rounded-2xl border-2 border-accent-blue/40 shadow-xl"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
