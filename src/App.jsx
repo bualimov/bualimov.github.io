@@ -51,7 +51,7 @@ function App() {
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               {/* Left side - Text */}
               <div className="w-full md:w-1/2 flex flex-col items-center text-center">
-                <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Hi, I'm Bakhtiyor!</h1>
+                <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Hi, I'm Bakhtiyor! 👋</h1>
                 <p className="text-2xl md:text-3xl text-gray-300 mb-8">
                   Studying CS@Pitt
                   <br />
@@ -96,11 +96,24 @@ function App() {
         {/* About Section */}
         <section id="about" className="h-screen w-full bg-dark-accent flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">About Me</h2>
-            <p className="text-lg text-gray-300">
-              I'm a sophomore at the University of Pittsburgh, majoring in Computer Science
-              with a minor in Economics. I'm passionate about technology and always eager
-              to learn new things.
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">About Me 🎸</h2>
+            <p className="text-2xl leading-relaxed text-gray-300">
+              Hi, I'm Bakhtiyor! Currently in my second year at the <b>University of Pittsburgh</b>,
+              I am majoring in Computer Science, minoring in Economics, and pursuing the Pitt Honors
+              Degree. I love creating things, problem solving, putting things together, and hope to
+              become a software developer one day. To work towards this goal, I've worked on a variety
+              of projects, and incorporated my hobbies into them. Be sure to check them out! As far as
+              this website, I built it to share a little more about myself, and showcase some of the
+              cool things I've worked on. I used <i>React, Vite, Tailwind, HTML, CSS, & JavaScript.</i>
+              <br />
+              <br />
+              Outside of academics, I love exploring and trying new things. I've had the opportunity
+              to travel all over the world, being from Uzbekistan myself, I've loved taking in the
+              different cultures. I've always had an appreciation for music, and a few years ago
+              I picked up the guitar and have loved it since. Playing and learning new songs takes up
+              more of my time than it should😅 Along with music, I enjoy learning and playing chess. I'm big into sports,
+              both as a fan and athlete. I've played hockey, soccer, basketball, and tennis throughout
+              my life. Also a huge Pittsburgh sports fan. But enough about me, thanks for visiting my page!
             </p>
           </div>
         </section>
