@@ -12,19 +12,53 @@ const ProjectModal = ({ project, onClose }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={onClose}>
       <div className="bg-dark-accent rounded-xl p-8 max-w-2xl w-full mx-4 relative" onClick={e => e.stopPropagation()}>
-        <button
-          className="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition-colors"
+        <span
+          className="absolute top-2 right-3 text-4xl text-gray-400 hover:text-red-500 transition-colors cursor-pointer leading-none"
           onClick={onClose}
         >
-          ✕
-        </button>
+          ×
+        </span>
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-64 object-cover rounded-lg mb-6"
+          className="w-full h-80 object-cover rounded-lg mb-6"
         />
         <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
-        <p className="text-gray-300">{project.fullDescription}</p>
+        <p className="text-gray-300 mb-6">{project.fullDescription}</p>
+        
+        {/* Collaborators Section */}
+        <div className="mb-6 text-center">
+          <h4 className="text-xl font-bold text-white mb-2">Collaborators</h4>
+          <div className="flex flex-wrap gap-2 justify-center">
+            {project.collaborators.map((collab, index) => (
+              <a
+                key={index}
+                href={collab.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent-blue hover:text-accent-blue/80 transition-colors"
+              >
+                {collab.name}
+                {index < project.collaborators.length - 1 && ", "}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Technical Skills Section */}
+        <div className="text-center">
+          <h4 className="text-xl font-bold text-white mb-2">Applied Technical Skills</h4>
+          <div className="flex flex-wrap gap-2 justify-center">
+            {project.technicalSkills.map((skill, index) => (
+              <span
+                key={index}
+                className="bg-dark px-3 py-1 rounded-full text-sm text-gray-300"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   )
@@ -40,7 +74,7 @@ const ProjectCard = ({ project, onClick }) => {
       <img
         src={project.image}
         alt={project.title}
-        className="w-full h-48 object-cover"
+        className="w-full h-56 object-cover"
       />
       <div className="p-6">
         <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
@@ -69,49 +103,101 @@ function App() {
       title: "This Website!",
       image: "https://picsum.photos/800/600?random=1",
       shortDescription: "My website to showcase my projects + skills.",
-      fullDescription: "More often than not, I am working on backend-focused projects. In an effort to improve my frontend skills, and because a personal website is convenient to have, I put this site together utilizing the React framework, and the main web-building languages of HTML5 and CSS3. At my upcoming internship this summer with US Steel, I know I'll be using React, and I wanted to expand my understanding of frontend development. I aim to learn about more tools and frameworks to help me more efficiently build sites like this with more practical goals in mind."
+      fullDescription: "More often than not, I am working on backend-focused projects. In an effort to improve my frontend skills, and because a personal website is convenient to have, I put this site together utilizing the React framework, and the main web-building languages of HTML5 and CSS3. At my upcoming internship this summer with US Steel, I know I'll be using React, and I wanted to expand my understanding of frontend development. I aim to learn about more tools and frameworks to help me more efficiently build sites like this with more practical goals in mind.",
+      collaborators: [
+        { name: "John Doe", github: "https://github.com/johndoe" },
+        { name: "Jane Smith", github: "https://github.com/janesmith" }
+      ],
+      technicalSkills: ["React", "HTML5", "CSS3", "JavaScript", "Tailwind", "Vite"]
     },
     {
       id: 2,
       title: "NFL Big Data Bowl 2025",
-      image: "https://picsum.photos/800/600?random=2",
+      image: "/src/assets/databowl_cover.png",
       shortDescription: "Analayzed 56M+ data points to analyze defensive entropy in the NFL.",
-      fullDescription: "This project aims to reach a conclusion that helps NFL coaches become better at their job. Thie year, I observed the \"randomness\" of defensive players, and how it impacts the game. The NFL hosts a data competition yearly through Kaggle, open to everyone, where they release extremely large amounts of data from games the previous season. This year, I partnered with my brother to utilize pre-snap data to predict player movements, probability of certain in-game events, play selection, and several other things."
+      fullDescription: "This project aims to reach a conclusion that helps NFL coaches become better at their job. Thie year, I observed the \"randomness\" of defensive players, and how it impacts the game. The NFL hosts a data competition yearly through Kaggle, open to everyone, where they release extremely large amounts of data from games the previous season. This year, I partnered with my brother to utilize pre-snap data to predict player movements, probability of certain in-game events, play selection, and several other things.",
+      collaborators: [
+        { name: "Dimitrios Papazekos", github: "https://github.com/dimitrios06" },
+      ],
+      technicalSkills: ["Python", "Pandas", "NumPy", "Plotly", "Matplotlib", "HTML", "Markdown", "Jupyter"]
     },
     {
       id: 3,
-      title: "JavaStudyTool",
-      image: "https://picsum.photos/800/600?random=3",
-      shortDescription: "An interactive notebook for students and professors to use to help understand DS and Algorithms",
-      fullDescription: "I built this with my friends as part of my first ever hackathon project. Our goal was to make a website that both students and proofessors could use to help visualize the concepts of complex data structures in programming, such as arrays and linked lists. We integrated a data structure \"populator\", where users could input a data structure and length. Along with that, users can draw using the built-in canvas on our page. Also, feel free to talk with Pitt's mascot, where you can learn more in detail about these data structures. Use the Professor Search Tool to find your professor's name, email, and office hours instead of having to look them up. In the future, we look to expand upon this project to fully implement its intended functionalities, adding more data structures and details."
+      title: "Java Study Tool",
+      image: "/src/assets/javastudytool_cover.png",
+      shortDescription: "Interactive learning platform for Java programming concepts.",
+      fullDescription: "I built this with my friends as part of my first ever hackathon project. Our goal was to make a website that both students and professors could use to help visualize the concepts of complex data structures in programming, such as arrays and linked lists. We integrated a data structure 'populator', where users could input a data structure and length. Along with that, users can draw using the built-in canvas on our page. Also, feel free to talk with Pitt's mascot, where you can learn more in detail about these data structures. Use the Professor Search Tool to find your professor's name, email, and office hours instead of having to look them up. In the future, we look to expand upon this project to fully implement its intended functionalities, adding more data structures and details.",
+      collaborators: [
+        { name: "Ilya Abbasian", github: "https://github.com/ilya-abbasian" },
+        { name: "Kyle Zheng", github: "https://github.com/kylezheng11" }
+      ],
+      technicalSkills: ["Java", "JavaScript", "TypeScript", "HTML", "CSS", "Markdown"]
     },
     {
       id: 4,
       title: "Top Chess Players",
-      image: "https://picsum.photos/800/600?random=4",
-      shortDescription: "Interactive Jupyter Notebook to process info about world's top players.",
-      fullDescription: "I started this project to sharpen my Python skills, after mostly working with Java for a long time in my classes. This was a side project that aimed to deliver an interactive notebook where users can select a player, and find out a lot more information about them. For example, right now there are functionalities to find surface level information like country, name, and age. Along with that, there are more complex ideas like incorporating player tendencies, opening strategies, etc."
+      image: "/src/assets/chessplayers_cover.png",
+      shortDescription: "Data analysis of chess player statistics and strategies.",
+      fullDescription: "I started this project to sharpen my Python skills, after mostly working with Java for a long time in my classes. This was a side project that aimed to deliver an interactive notebook where users can select a player, and find out a lot more information about them. For example, right now there are functionalities to find surface level information like country, name, and age. Along with that, there are more complex ideas like incorporating player tendencies, opening strategies, etc.",
+      collaborators: [
+        { name: "Ilya Abbasian", github: "https://github.com/ilya-abbasian" },
+        { name: "Kyle Zheng", github: "https://github.com/kylezheng11" }
+      ],
+      technicalSkills: ["Python", "Pandas", "Matplotlib", "Selenium", "Jupyter"]
     },
     {
       id: 5,
       title: "Pittsburgh Sports",
-      image: "https://picsum.photos/800/600?random=5",
-      shortDescription: "A detailed, visualization-focused Jupyter Notebook that examines the best areas in PGH for sports.",
-      fullDescription: "This project was my first ever programming project, and one of the most fun ones. I partnered with my friend in the same class, as it was a class project. In the end, it actually ended up being a model project for future classes. We came up with four different metrics that determine which neighborhood in Pittsburgh is the best for playing sports. We analyzed population, crime, quality of the parks, and quantity of the parks in each neighborhood. Both being from the Pittsburgh area, we were able to go through this project as a duo, in contrast to everyone else who worked in groups of 3-4. It was my first time doing a proper programming project, and when I started practicing writing organized code."
+      image: "/src/assets/pghsports_cover.png",
+      shortDescription: "Statistical analysis of Pittsburgh sports teams performance.",
+      fullDescription: "This project was my first ever programming project, and one of the most fun ones. I partnered with my friend in the same class, as it was a class project. In the end, it actually ended up being a model project for future classes. We came up with four different metrics that determine which neighborhood in Pittsburgh is the best for playing sports. We analyzed population, crime, quality of the parks, and quantity of the parks in each neighborhood. Both being from the Pittsburgh area, we were able to go through this project as a duo, in contrast to everyone else who worked in groups of 3-4. It was my first time doing a proper programming project, and when I started practicing writing organized code.",
+      collaborators: [
+        { name: "Matthew Lu", github: "https://github.com/matthewlu2" }
+      ],
+      technicalSkills: ["Python", "Pandas", "NumPy", "PlotLy", "Geopandas", "Jupyter"]
     },
     {
       id: 6,
-      title: "Sports Injuries",
-      image: "https://picsum.photos/800/600?random=6",
-      shortDescription: "A website that informs users of common sports-related injuries that athletes should know about.",
-      fullDescription: "This was a group project I worked on with my classmates - we thought this would be a clever way to sharpen our frontend programming skills while also learning more about common injuries, their treatments, and ways to prevent them. Each one of us is active so it was interesting to learn in depth about all sorts of accidents, considering we have all had a sports-related injury at some point in our lives. We built this website collectively with the basic frontend languages, without frameworks. This was also good practice with version control, since there was a total of five of us in a group."
+      title: "Sports Injury Prediction",
+      image: "/src/assets/sportsinjuries_cover.png",
+      shortDescription: "ML model for predicting sports injuries based on player data.",
+      fullDescription: "This was a group project I worked on with my classmates - we thought this would be a clever way to sharpen our frontend programming skills while also learning more about common injuries, their treatments, and ways to prevent them. Each one of us is active so it was interesting to learn in depth about all sorts of accidents, considering we have all had a sports-related injury at some point in our lives. We built this website collectively with the basic frontend languages, without frameworks. This was also good practice with version control, since there was a total of five of us in a group.",
+      collaborators: [
+        { name: "Carter Knight", github: "https://github.com/carknight8" },
+        { name: "Chase Marsalko", github: "https://github.com/cmarsalko" },
+        { name: "Thayne Stine", github: "https://github.com/thaynestine" }
+      ],
+      technicalSkills: ["JavaScript", "HTML", "CSS", "Markdown"]
+    },
+    {
+      id: 7,
+      title: "Project Seven",
+      image: "https://picsum.photos/800/600?random=7",
+      shortDescription: "Brief description of project seven goes here.",
+      fullDescription: "Detailed description of project seven with comprehensive information about goals, implementation, and outcomes.",
+      collaborators: [
+        { name: "Ian Black", github: "https://github.com/ianblack" }
+      ],
+      technicalSkills: ["React", "Node.js", "MongoDB", "Express", "AWS"]
+    },
+    {
+      id: 8,
+      title: "Project Eight",
+      image: "https://picsum.photos/800/600?random=8",
+      shortDescription: "Brief description of project eight goes here.",
+      fullDescription: "Detailed description of project eight with comprehensive information about goals, implementation, and outcomes.",
+      collaborators: [
+        { name: "Julia White", github: "https://github.com/juliawhite" },
+        { name: "Kevin Gray", github: "https://github.com/kevingray" }
+      ],
+      technicalSkills: ["Django", "PostgreSQL", "Redis", "Celery", "Docker"]
     }
   ]
 
   return (
     <div className="min-h-screen w-screen bg-dark font-raleway">
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 right-0 bg-dark-accent shadow-lg z-50">
+      <nav className="fixed top-0 left-0 right-0 bg-dark-accent shadow-2xl z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
@@ -181,7 +267,7 @@ function App() {
               {/* Right side - Image */}
               <div className="w-full md:w-1/2 flex justify-center md:justify-end">
                 <div className="relative w-80 h-80 md:w-[28rem] md:h-[28rem]">
-                  <div className="absolute inset-0 bg-accent-blue/20 rounded-2xl transform rotate-6"></div>
+                  <div className="absolute inset-0 bg-accent-blue/40 rounded-2xl transform rotate-6"></div>
                   <img 
                     src={profilePic} 
                     alt="Bakhtiyor Alimov"
@@ -417,6 +503,12 @@ function App() {
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" className="w-12 h-12 mb-2" alt="C++" />
                     <span className="text-white text-sm font-bold">C++</span>
                   </div>
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <div className="h-12 flex items-center justify-center mb-2">
+                      <span className="text-white text-2xl font-bold">MIPS</span>
+                    </div>
+                    <span className="text-white text-sm font-bold">MIPS</span>
+                  </div>
                 </div>
               </div>
 
@@ -440,6 +532,20 @@ function App() {
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" className="w-12 h-12 mb-2" alt="SQL" />
                     <span className="text-white text-sm font-bold">SQL</span>
                   </div>
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <div className="h-12 flex items-center justify-center mb-2">
+                      <img 
+                        src="https://matplotlib.org/stable/_static/logo2.svg" 
+                        className="h-12 w-12 object-contain" 
+                        alt="Matplotlib" 
+                      />
+                    </div>
+                    <span className="text-white text-sm font-bold">Matplotlib</span>
+                  </div>
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://geopandas.org/en/stable/_images/geopandas_icon.png" className="w-12 h-12 mb-2" alt="GeoPandas" />
+                    <span className="text-white text-sm font-bold">GeoPandas</span>
+                  </div>
                 </div>
               </div>
 
@@ -450,14 +556,6 @@ function App() {
                   <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cucumber/cucumber-plain.svg" className="w-12 h-12 mb-2" alt="Cucumber" />
                     <span className="text-white text-sm font-bold">Cucumber</span>
-                  </div>
-                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" className="w-12 h-12 mb-2" alt="Django" />
-                    <span className="text-white text-sm font-bold">Django</span>
-                  </div>
-                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" className="w-12 h-12 mb-2 invert" alt="Flask" />
-                    <span className="text-white text-sm font-bold">Flask</span>
                   </div>
                   <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" className="w-12 h-12 mb-2" alt="Jupyter" />
@@ -484,8 +582,14 @@ function App() {
                     <span className="text-white text-sm font-bold">React</span>
                   </div>
                   <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
-                    <img src="https://asset.brandfetch.io/idFdo8ulhr/idg4l58CuH.svg" className="w-12 h-12 mb-2" alt="Cypress" />
-                    <span className="text-white text-sm font-bold">Cypress</span>
+                    <div className="h-12 flex items-center justify-center mb-2">
+                      <span className="text-white text-2xl font-bold">XML</span>
+                    </div>
+                    <span className="text-white text-sm font-bold">XML</span>
+                  </div>
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://vitejs.dev/logo.svg" className="w-12 h-12 mb-2" alt="Vite" />
+                    <span className="text-white text-sm font-bold">Vite</span>
                   </div>
                 </div>
               </div>
@@ -498,7 +602,7 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-white mb-2">© 2025 Bakhtiyor Alimov. All rights reserved.</p>
             <p className="text-sm text-gray-400">
-              Hi there! Feel free to contact me at{' '}
+              Feel free to contact me at{' '}
               <a href="mailto:baa160@pitt.edu" className="text-accent-blue hover:text-accent-blue/80">
                 baa160@pitt.edu
               </a>
