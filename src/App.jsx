@@ -24,16 +24,15 @@ function App() {
       <nav className="fixed top-0 left-0 right-0 bg-dark-accent shadow-lg z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
-            <Link
-              to="home"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              className="nav-link text-2xl font-bold text-white cursor-pointer hover:text-accent-blue transition-colors"
-            >
-              Bakhtiyor Alimov
-            </Link>
+            <div className="flex items-center">
+              <img src="/src/assets/logo3.png" alt="BA Logo" className="h-8 brightness-0 invert" />
+              <a
+                href="#home"
+                className="nav-link text-2xl font-bold text-white cursor-pointer hover:text-accent-blue transition-colors ml-3"
+              >
+                Bakhtiyor Alimov
+              </a>
+            </div>
             <div className="hidden md:flex items-center justify-center space-x-8">
               {navItems.map((item) => (
                 <Link
@@ -85,8 +84,8 @@ function App() {
                     className="transform transition-transform hover:scale-110"
                   >
                     <FaGithub className="w-10 h-10 text-[#f4511e]" />
-                  </a>
-                </div>
+        </a>
+      </div>
               </div>
               
               {/* Right side - Image */}
@@ -125,8 +124,8 @@ function App() {
               more of my time than it should😅 Along with music, I enjoy learning and playing chess. I'm big into sports,
               both as a fan and athlete. I've played hockey, soccer, basketball, and tennis throughout
               my life. Also a huge Pittsburgh sports fan. But enough about me, thanks for visiting my page!
-            </p>
-          </div>
+        </p>
+      </div>
         </section>
 
         {/* Education Section */}
@@ -232,7 +231,7 @@ function App() {
                     <div className="bg-dark p-6 rounded-lg shadow-xl">
                       <h3 className="text-xl font-bold text-white mb-2">Certified Trainer & Shift Supervisor</h3>
                       <p className="text-lg text-gray-300">Raising Cane's</p>
-                      <p className="text-sm text-pitt-gold mb-3">January 2024 - March 2024</p>
+                      <p className="text-sm text-pitt-gold mb-3">January 2024 - October 2024</p>
                       <p className="text-gray-300">Identified as a high-potential employee and fast-tracked for a managerial role. Routinely trained team members on crew member tasks while maintaining operational efficiency and customer satisfaction.</p>
                     </div>
                   </div>
@@ -244,7 +243,7 @@ function App() {
                     <div className="bg-dark p-6 rounded-lg shadow-xl">
                       <h3 className="text-xl font-bold text-white mb-2">Junior Analyst</h3>
                       <p className="text-lg text-gray-300">Panther Equity</p>
-                      <p className="text-sm text-pitt-gold mb-3">September 2023 - Present</p>
+                      <p className="text-sm text-pitt-gold mb-3">September 2024 - Present</p>
                       <p className="text-gray-300">Utilized Excel & financial modeling tools to assess investment opportunities, performing quantitative analysis. Prepared reports and presentations analyzing activity & trends in the stock market.</p>
                     </div>
                   </div>
@@ -260,7 +259,7 @@ function App() {
                     <div className="bg-dark p-6 rounded-lg shadow-xl">
                       <h3 className="text-xl font-bold text-white mb-2">President</h3>
                       <p className="text-lg text-gray-300">Golden Oaks Designs</p>
-                      <p className="text-sm text-pitt-gold mb-3">May 2023 - June 2023</p>
+                      <p className="text-sm text-pitt-gold mb-3">September 2021 - June 2023</p>
                       <p className="text-gray-300">Led production to a record sales year, increasing revenue by 30% through designing best-selling wooden pens. Managed business operations within a collaborative team, overseeing product development and marketing.</p>
                     </div>
                   </div>
@@ -272,7 +271,7 @@ function App() {
                     <div className="bg-dark p-6 rounded-lg shadow-xl">
                       <h3 className="text-xl font-bold text-white mb-2">Volunteer Operations Manager</h3>
                       <p className="text-lg text-gray-300">Pittsburgh Salvation Army</p>
-                      <p className="text-sm text-pitt-gold mb-3">2021 - August 2022</p>
+                      <p className="text-sm text-pitt-gold mb-3">August 2021 - August 2022</p>
                       <p className="text-gray-300">Maintained warm, welcoming atmosphere aligned with organization's standards. Actively participated in clothing donations and inventory management, providing essential services to the community.</p>
                     </div>
                   </div>
@@ -287,74 +286,106 @@ function App() {
         {/* Skills Section */}
         <section id="skills" className="min-h-screen w-full bg-dark-accent flex items-center py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <h2 className="text-3xl md:text-5xl font-bold mb-12 text-white text-center">Skills 🛠️</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-12 text-white">Skills 🛠️</h2>
             
             <div className="space-y-12">
               {/* Languages */}
               <div>
-                <h3 className="text-2xl font-bold text-white mb-6 text-center">Languages</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" className="w-16 h-16 mb-3" alt="Java" />
-                    <span className="text-white">Java</span>
+                <h3 className="text-2xl font-bold text-white mb-6 text-left">Languages</h3>
+                <div className="flex flex-wrap gap-4">
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" className="w-12 h-12 mb-2" alt="Java" />
+                    <span className="text-white text-sm font-bold">Java</span>
                   </div>
-                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" className="w-16 h-16 mb-3" alt="Python" />
-                    <span className="text-white">Python</span>
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" className="w-12 h-12 mb-2" alt="Python" />
+                    <span className="text-white text-sm font-bold">Python</span>
                   </div>
-                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="w-16 h-16 mb-3" alt="JavaScript" />
-                    <span className="text-white">JavaScript</span>
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" className="w-12 h-12 mb-2" alt="HTML5" />
+                    <span className="text-white text-sm font-bold">HTML5</span>
                   </div>
-                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" className="w-16 h-16 mb-3" alt="C++" />
-                    <span className="text-white">C++</span>
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" className="w-12 h-12 mb-2" alt="CSS3" />
+                    <span className="text-white text-sm font-bold">CSS3</span>
+                  </div>
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="w-12 h-12 mb-2" alt="JavaScript" />
+                    <span className="text-white text-sm font-bold">JavaScript</span>
+                  </div>
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" className="w-12 h-12 mb-2" alt="C++" />
+                    <span className="text-white text-sm font-bold">C++</span>
                   </div>
                 </div>
               </div>
 
               {/* Data */}
               <div>
-                <h3 className="text-2xl font-bold text-white mb-6 text-center">Data</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" className="w-16 h-16 mb-3" alt="NumPy" />
-                    <span className="text-white">NumPy</span>
+                <h3 className="text-2xl font-bold text-white mb-6 text-left">Data</h3>
+                <div className="flex flex-wrap gap-4">
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" className="w-12 h-12 mb-2" alt="NumPy" />
+                    <span className="text-white text-sm font-bold">NumPy</span>
                   </div>
-                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" className="w-16 h-16 mb-3" alt="Pandas" />
-                    <span className="text-white">Pandas</span>
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" className="w-12 h-12 mb-2" alt="Pandas" />
+                    <span className="text-white text-sm font-bold">Pandas</span>
                   </div>
-                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" className="w-16 h-16 mb-3" alt="SQL" />
-                    <span className="text-white">SQL</span>
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://plotly.com/all_static/images/icon-dash.png" className="w-12 h-12 mb-2" alt="Plotly" />
+                    <span className="text-white text-sm font-bold">Plotly</span>
                   </div>
-                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
-                    <img src="https://cdn.plot.ly/plotly-2.27.0.logo.png" className="w-16 h-16 mb-3" alt="Plotly" />
-                    <span className="text-white">Plotly</span>
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" className="w-12 h-12 mb-2" alt="SQL" />
+                    <span className="text-white text-sm font-bold">SQL</span>
                   </div>
                 </div>
               </div>
 
               {/* Frameworks */}
               <div>
-                <h3 className="text-2xl font-bold text-white mb-6 text-center">Frameworks</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="w-16 h-16 mb-3" alt="React" />
-                    <span className="text-white">React</span>
+                <h3 className="text-2xl font-bold text-white mb-6 text-left">Frameworks</h3>
+                <div className="flex flex-wrap gap-4">
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cucumber/cucumber-plain.svg" className="w-12 h-12 mb-2" alt="Cucumber" />
+                    <span className="text-white text-sm font-bold">Cucumber</span>
                   </div>
-                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" className="w-16 h-16 mb-3" alt="Django" />
-                    <span className="text-white">Django</span>
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" className="w-12 h-12 mb-2" alt="Django" />
+                    <span className="text-white text-sm font-bold">Django</span>
                   </div>
-                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" className="w-16 h-16 mb-3" alt="Flask" />
-                    <span className="text-white">Flask</span>
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" className="w-12 h-12 mb-2 invert" alt="Flask" />
+                    <span className="text-white text-sm font-bold">Flask</span>
                   </div>
-                  <div className="bg-dark-accent p-6 rounded-lg shadow-xl flex flex-col items-center">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" className="w-16 h-16 mb-3" alt="Spring" />
-                    <span className="text-white">Spring</span>
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" className="w-12 h-12 mb-2" alt="Jupyter" />
+                    <span className="text-white text-sm font-bold">Jupyter</span>
+                  </div>
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" className="w-12 h-12 mb-2 invert" alt="Markdown" />
+                    <span className="text-white text-sm font-bold">Markdown</span>
+                  </div>
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" className="w-12 h-12 mb-2" alt="NodeJS" />
+                    <span className="text-white text-sm font-bold">NodeJS</span>
+                  </div>
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" className="w-12 h-12 mb-2" alt="Selenium" />
+                    <span className="text-white text-sm font-bold">Selenium</span>
+                  </div>
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" className="w-12 h-12 mb-2" alt="Spring" />
+                    <span className="text-white text-sm font-bold">Spring</span>
+                  </div>
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="w-12 h-12 mb-2" alt="React" />
+                    <span className="text-white text-sm font-bold">React</span>
+                  </div>
+                  <div className="bg-dark w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110">
+                    <img src="https://asset.brandfetch.io/idFdo8ulhr/idg4l58CuH.svg" className="w-12 h-12 mb-2" alt="Cypress" />
+                    <span className="text-white text-sm font-bold">Cypress</span>
                   </div>
                 </div>
               </div>
@@ -367,10 +398,11 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-white mb-2">© 2025 Bakhtiyor Alimov. All rights reserved.</p>
             <p className="text-sm text-gray-400">
-              Contact me at{' '}
+              Hi there! Feel free to contact me at{' '}
               <a href="mailto:baa160@pitt.edu" className="text-accent-blue hover:text-accent-blue/80">
                 baa160@pitt.edu
               </a>
+              !
             </p>
           </div>
         </footer>
