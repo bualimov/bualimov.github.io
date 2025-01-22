@@ -11,7 +11,7 @@ import './App.css'
 const ProjectModal = ({ project, onClose }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={onClose}>
-      <div className="bg-dark-accent rounded-xl p-8 max-w-4xl w-full mx-4 relative" onClick={e => e.stopPropagation()}>
+      <div className="bg-dark-accent rounded-xl p-8 max-w-3xl w-full mx-4 relative" onClick={e => e.stopPropagation()}>
         <span
           className="absolute top-2 right-3 text-4xl text-gray-400 hover:text-red-500 transition-colors cursor-pointer leading-none"
           onClick={onClose}
@@ -21,9 +21,16 @@ const ProjectModal = ({ project, onClose }) => {
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-80 object-cover rounded-lg mb-6"
+          className="w-full h-auto max-h-[400px] object-contain rounded-lg mb-6"
         />
-        <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
+        <a
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block text-2xl font-bold text-white mb-4 hover:text-accent-blue transition-colors"
+        >
+          {project.title}
+        </a>
         <p className="text-gray-300 mb-6">{project.fullDescription}</p>
         
         {/* Collaborators Section - Only show if there are collaborators */}
@@ -104,6 +111,7 @@ function App() {
       id: 1,
       title: "This Website!",
       image: "https://picsum.photos/800/600?random=1",
+      github: "https://github.com/bualimov/bualimov.github.io",
       shortDescription: "My website to showcase my projects + skills.",
       fullDescription: "More often than not, I am working on backend-focused projects. In an effort to improve my frontend skills, and because a personal website is convenient to have, I put this site together utilizing the React and Vite frameworks, and the main web-building languages of HTML5 and CSS3. At my upcoming internship this summer with US Steel, I know I'll be using React, and I wanted to expand my understanding of frontend development. I aim to learn about more tools and frameworks to help me more efficiently build sites like this with more practical goals in mind.",
       collaborators: [],
@@ -111,8 +119,9 @@ function App() {
     },
     {
       id: 2,
-      title: "NFL Big Data Bowl 2025", 
+      title: "NFL Big Data Bowl 2025",
       image: "/src/assets/databowl_cover.png",
+      github: "https://github.com/bualimov/nfl_project",
       shortDescription: (
         <>
           Analyzed 56M+ data points to analyze NFL data. Gained <b>500+ views</b> on Kaggle.
@@ -127,6 +136,7 @@ function App() {
       id: 3,
       title: "Java Study Tool",
       image: "/src/assets/javastudytool_cover.png",
+      github: "https://github.com/Ilya-Abbasian/JavaStudyTool-SteelHacks_Project/tree/MAIN3.0/public",
       shortDescription: "Interactive learning platform for Java programming concepts.",
       fullDescription: "I built this with my friends as part of my first ever hackathon project. Our goal was to make a website that both students and professors could use to help visualize the concepts of complex data structures in programming, such as arrays and linked lists. We integrated a data structure \"populator\", where users could input a data structure and length. Along with that, users can draw using the built-in canvas on our page. Also, feel free to talk with Pitt's mascot, where you can learn more in detail about these data structures. Use the Professor Search Tool to find your professor's name, email, and office hours instead of having to look them up. In the future, we look to expand upon this project to fully implement its intended functionalities, adding more data structures and details.",
       collaborators: [
@@ -139,6 +149,7 @@ function App() {
       id: 4,
       title: "Top Chess Players",
       image: "/src/assets/chessplayers_cover.png",
+      github: "https://github.com/bualimov/coding_projects/tree/main",
       shortDescription: "Data analysis of chess player statistics and strategies.",
       fullDescription: "I started this project to sharpen my Python skills, after mostly working with Java for a long time in my classes. This was a side project that aimed to deliver an interactive notebook where users can select a player, and find out a lot more information about them. For example, right now there are functionalities to find surface level information like country, name, and age. Along with that, there are more complex ideas like incorporating player tendencies, opening strategies, etc.",
       collaborators: [],
@@ -148,6 +159,7 @@ function App() {
       id: 5,
       title: "Pittsburgh Sports",
       image: "/src/assets/pghsports_cover.png",
+      github: "https://github.com/bualimov/coding_projects/blob/main/final-notebook.ipynb",
       shortDescription: "Analyzed Pittsburgh neighborhoods to find the best for playing sports.",
       fullDescription: "This project was my first ever programming project, and one of the most fun ones. I partnered with my friend in the same class, as it was a class project. In the end, it actually ended up being a model project for future classes. We came up with four different metrics that determine which neighborhood in Pittsburgh is the best for playing sports. We analyzed population, crime, quality of the parks, and quantity of the parks in each neighborhood. Both being from the Pittsburgh area, we were able to go through this project as a duo, in contrast to everyone else who worked in groups of 3-4. It was my first time doing a proper programming project, and when I started practicing writing organized code.",
       collaborators: [
@@ -159,6 +171,7 @@ function App() {
       id: 6,
       title: "Sports Injuries",
       image: "/src/assets/sportsinjuries_cover.png",
+      github: "https://github.com/cmarsalko/Sports_Injuries_and_Treatment",
       shortDescription: "Website showcasing common sports-related injuries athletes should know about.",
       fullDescription: "This was a group project I worked on with my classmates - we thought this would be a clever way to sharpen our frontend programming skills while also learning more about common injuries, their treatments, and ways to prevent them. Each one of us is active so it was interesting to learn in depth about all sorts of accidents, considering we have all had a sports-related injury at some point in our lives. We built this website collectively with the basic frontend languages, without frameworks. This was also good practice with version control, since there was a total of five of us in a group.",
       collaborators: [
@@ -172,6 +185,7 @@ function App() {
       id: 7,
       title: "Algorithms & Data Structures Projects",
       image: "/src/assets/algds_cover.png",
+      github: "https://github.com/bualimov/cs445",
       shortDescription: "Brief description of project seven goes here.",
       fullDescription: "Here you will find my repository for my projects I worked on in my Algorithms & Data Structures class. A lot of these consist of familiarizing myself with implementing algorithms on different data structures, studying how they work, and how they can be utilized in real-world applications. Not much interesting information here, but I'm sure I'll be adding more to this repository as I continue to work on more projects.",
       collaborators: [],
