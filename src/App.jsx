@@ -7,8 +7,52 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa6'
 import cathedral from './assets/cathedral.jpg'
 import './App.css'
 
+// Project Modal Component
+const ProjectModal = ({ project, onClose }) => {
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={onClose}>
+      <div className="bg-dark-accent rounded-xl p-8 max-w-2xl w-full mx-4 relative" onClick={e => e.stopPropagation()}>
+        <button
+          className="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition-colors"
+          onClick={onClose}
+        >
+          ✕
+        </button>
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-64 object-cover rounded-lg mb-6"
+        />
+        <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
+        <p className="text-gray-300">{project.fullDescription}</p>
+      </div>
+    </div>
+  )
+}
+
+// Project Card Component
+const ProjectCard = ({ project, onClick }) => {
+  return (
+    <div
+      className="bg-dark rounded-xl overflow-hidden shadow-xl cursor-pointer transform transition-all hover:scale-105"
+      onClick={onClick}
+    >
+      <img
+        src={project.image}
+        alt={project.title}
+        className="w-full h-48 object-cover"
+      />
+      <div className="p-6">
+        <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+        <p className="text-gray-300">{project.shortDescription}</p>
+      </div>
+    </div>
+  )
+}
+
 function App() {
   const [count, setCount] = useState(0)
+  const [selectedProject, setSelectedProject] = useState(null)
 
   const navItems = [
     { id: 'about', label: 'About' },
@@ -17,6 +61,52 @@ function App() {
     { id: 'experience', label: 'Experience' },
     { id: 'skills', label: 'Skills' },
   ];
+
+  // Sample project data
+  const projects = [
+    {
+      id: 1,
+      title: "This Website!",
+      image: "https://picsum.photos/800/600?random=1",
+      shortDescription: "My website to showcase my projects + skills.",
+      fullDescription: "More often than not, I am working on backend-focused projects. In an effort to improve my frontend skills, and because a personal website is convenient to have, I put this site together utilizing the React framework, and the main web-building languages of HTML5 and CSS3. At my upcoming internship this summer with US Steel, I know I'll be using React, and I wanted to expand my understanding of frontend development. I aim to learn about more tools and frameworks to help me more efficiently build sites like this with more practical goals in mind."
+    },
+    {
+      id: 2,
+      title: "NFL Big Data Bowl 2025",
+      image: "https://picsum.photos/800/600?random=2",
+      shortDescription: "Analayzed 56M+ data points to analyze defensive entropy in the NFL.",
+      fullDescription: "This project aims to reach a conclusion that helps NFL coaches become better at their job. Thie year, I observed the \"randomness\" of defensive players, and how it impacts the game. The NFL hosts a data competition yearly through Kaggle, open to everyone, where they release extremely large amounts of data from games the previous season. This year, I partnered with my brother to utilize pre-snap data to predict player movements, probability of certain in-game events, play selection, and several other things."
+    },
+    {
+      id: 3,
+      title: "JavaStudyTool",
+      image: "https://picsum.photos/800/600?random=3",
+      shortDescription: "An interactive notebook for students and professors to use to help understand DS and Algorithms",
+      fullDescription: "I built this with my friends as part of my first ever hackathon project. Our goal was to make a website that both students and proofessors could use to help visualize the concepts of complex data structures in programming, such as arrays and linked lists. We integrated a data structure \"populator\", where users could input a data structure and length. Along with that, users can draw using the built-in canvas on our page. Also, feel free to talk with Pitt's mascot, where you can learn more in detail about these data structures. Use the Professor Search Tool to find your professor's name, email, and office hours instead of having to look them up. In the future, we look to expand upon this project to fully implement its intended functionalities, adding more data structures and details."
+    },
+    {
+      id: 4,
+      title: "Top Chess Players",
+      image: "https://picsum.photos/800/600?random=4",
+      shortDescription: "Interactive Jupyter Notebook to process info about world's top players.",
+      fullDescription: "I started this project to sharpen my Python skills, after mostly working with Java for a long time in my classes. This was a side project that aimed to deliver an interactive notebook where users can select a player, and find out a lot more information about them. For example, right now there are functionalities to find surface level information like country, name, and age. Along with that, there are more complex ideas like incorporating player tendencies, opening strategies, etc."
+    },
+    {
+      id: 5,
+      title: "Pittsburgh Sports",
+      image: "https://picsum.photos/800/600?random=5",
+      shortDescription: "A detailed, visualization-focused Jupyter Notebook that examines the best areas in PGH for sports.",
+      fullDescription: "This project was my first ever programming project, and one of the most fun ones. I partnered with my friend in the same class, as it was a class project. In the end, it actually ended up being a model project for future classes. We came up with four different metrics that determine which neighborhood in Pittsburgh is the best for playing sports. We analyzed population, crime, quality of the parks, and quantity of the parks in each neighborhood. Both being from the Pittsburgh area, we were able to go through this project as a duo, in contrast to everyone else who worked in groups of 3-4. It was my first time doing a proper programming project, and when I started practicing writing organized code."
+    },
+    {
+      id: 6,
+      title: "Sports Injuries",
+      image: "https://picsum.photos/800/600?random=6",
+      shortDescription: "A website that informs users of common sports-related injuries that athletes should know about.",
+      fullDescription: "This was a group project I worked on with my classmates - we thought this would be a clever way to sharpen our frontend programming skills while also learning more about common injuries, their treatments, and ways to prevent them. Each one of us is active so it was interesting to learn in depth about all sorts of accidents, considering we have all had a sports-related injury at some point in our lives. We built this website collectively with the basic frontend languages, without frameworks. This was also good practice with version control, since there was a total of five of us in a group."
+    }
+  ]
 
   return (
     <div className="min-h-screen w-screen bg-dark font-raleway">
@@ -84,8 +174,8 @@ function App() {
                     className="transform transition-transform hover:scale-110"
                   >
                     <FaGithub className="w-10 h-10 text-[#f4511e]" />
-        </a>
-      </div>
+                  </a>
+                </div>
               </div>
               
               {/* Right side - Image */}
@@ -124,8 +214,8 @@ function App() {
               more of my time than it should😅 Along with music, I enjoy learning and playing chess. I'm big into sports,
               both as a fan and athlete. I've played hockey, soccer, basketball, and tennis throughout
               my life. Also a huge Pittsburgh sports fan. But enough about me, thanks for visiting my page!
-        </p>
-      </div>
+            </p>
+          </div>
         </section>
 
         {/* Education Section */}
@@ -184,18 +274,28 @@ function App() {
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="h-screen w-full bg-dark-accent flex items-center">
+        <section id="projects" className="min-h-screen w-full bg-dark-accent flex items-center py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">Projects 📝</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Add your projects here */}
-              <div className="bg-dark p-6 rounded-lg shadow-xl border border-accent-blue/30">
-                <h3 className="text-xl font-bold mb-2 text-white">Project 1</h3>
-                <p className="text-gray-300">Description of your project goes here</p>
-              </div>
+            <h2 className="text-3xl md:text-5xl font-bold mb-12 text-white">Projects 🚀</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {projects.map((project) => (
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  onClick={() => setSelectedProject(project)}
+                />
+              ))}
             </div>
           </div>
         </section>
+
+        {selectedProject && (
+          <ProjectModal
+            project={selectedProject}
+            onClose={() => setSelectedProject(null)}
+          />
+        )}
 
         {/* Experience Section */}
         <section id="experience" className="min-h-screen w-full bg-dark flex items-center py-12">
