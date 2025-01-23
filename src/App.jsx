@@ -155,7 +155,7 @@ function App() {
     {
       id: 1,
       title: "This Website!",
-      image: "https://picsum.photos/800/600?random=1",
+      image: "/src/assets/webcover.png",
       github: "https://github.com/bualimov/bualimov.github.io",
       shortDescription: "My website to showcase my projects + skills.",
       fullDescription: "More often than not, I am working on backend-focused projects. In an effort to improve my frontend skills, and because a personal website is convenient to have, I put this site together utilizing the React and Vite frameworks, and the main web-building languages of HTML5 and CSS3. At my upcoming internship this summer with US Steel, I know I'll be using React, and I wanted to expand my understanding of frontend development. I aim to learn about more tools and frameworks to help me more efficiently build sites like this with more practical goals in mind.",
@@ -183,8 +183,12 @@ function App() {
       image: "/src/assets/javastudytool_cover.png",
       github: "https://github.com/Ilya-Abbasian/JavaStudyTool-SteelHacks_Project/tree/MAIN3.0/public",
       shortDescription: "Interactive learning platform for Java programming concepts.",
-      fullDescription: "I built this with my friends as part of my first ever hackathon project. Our goal was to make a website that both students and professors could use to help visualize the concepts of complex data structures in programming, such as arrays and linked lists. We integrated a data structure \"populator\", where users could input a data structure and length. Along with that, users can draw using the built-in canvas on our page. Also, feel free to talk with Pitt's mascot, where you can learn more in detail about these data structures. Use the Professor Search Tool to find your professor's name, email, and office hours instead of having to look them up. In the future, we look to expand upon this project to fully implement its intended functionalities, adding more data structures and details.",
-      collaborators: [
+      fullDescription: (
+        <>
+          I built this with my friends as part of my first ever hackathon project. Our goal was to make a website that both students and professors could use to help visualize the concepts of complex data structures in programming, such as arrays and linked lists. We integrated a data structure "populator", where users could input a data structure and length. Along with that, users can draw using the built-in canvas on our page. Also, feel free to talk with Pitt's mascot, <i>Roc</i>, where you can learn more in detail about these data structures. Use the <i>Professor Search Tool</i> to find your professor's name, email, and office hours instead of having to look them up. In the future, we look to expand upon this project to fully implement its intended functionalities, adding more data structures.
+        </>
+      ),
+            collaborators: [
         { name: "Ilya Abbasian", github: "https://github.com/ilya-abbasian" },
         { name: "Kyle Zheng", github: "https://github.com/kylezheng11" }
       ],
@@ -195,8 +199,12 @@ function App() {
       title: "Top Chess Players",
       image: "/src/assets/chessplayers_cover.png",
       github: "https://github.com/bualimov/coding_projects/tree/main",
-      shortDescription: "Data analysis of chess player statistics and strategies.",
-      fullDescription: "I started this project to sharpen my Python skills, after mostly working with Java for a long time in my classes. This was a side project that aimed to deliver an interactive notebook where users can select a player, and find out a lot more information about them. For example, right now there are functionalities to find surface level information like country, name, and age. Along with that, there are more complex ideas like incorporating player tendencies, opening strategies, etc.",
+      shortDescription: (
+        <>
+          Analysis of world's top <b>200</b> chess players, their statistics, and strategies.
+        </>
+      ),
+            fullDescription: "I started this project to sharpen my Python skills, after mostly working with Java for a long time in my classes. This was a side project that aimed to deliver an interactive notebook where users can select a player, and find out a lot more information about them. For example, right now there are functionalities to find surface level information like country, name, and age. Along with that, there are more complex ideas like incorporating player tendencies, opening strategies, etc.",
       collaborators: [],
       technicalSkills: ["Python", "Pandas", "Matplotlib", "Selenium", "Jupyter"]
     },
@@ -228,10 +236,10 @@ function App() {
     },
     {
       id: 7,
-      title: "Algorithms & Data Structures Projects",
+      title: "Algorithms & Data Structures",
       image: "/src/assets/algds_cover.png",
       github: "https://github.com/bualimov/cs445",
-      shortDescription: "Brief description of project seven goes here.",
+      shortDescription: "Github repository for my projects in Algorithms & Data Structures.",
       fullDescription: "Here you will find my repository for my projects I worked on in my Algorithms & Data Structures class. A lot of these consist of familiarizing myself with implementing algorithms on different data structures, studying how they work, and how they can be utilized in real-world applications. Not much interesting information here, but I'm sure I'll be adding more to this repository as I continue to work on more projects.",
       collaborators: [],
       technicalSkills: ["Java"]
@@ -353,7 +361,7 @@ function App() {
               <br />
               <br />
               Outside of academics, I love exploring and trying new things. I've had the opportunity
-              to travel all over the world, being from Uzbekistan myself, I've loved taking in the
+              to travel all over the world, being from Uzbekistan myself, I've loved taking in 
               different cultures. I've always had an appreciation for music, and a few years ago
               I picked up the guitar and have loved it since. Playing and learning new songs takes up
               more of my time than it should😅 Along with music, I enjoy learning and playing chess. I'm big into sports,
@@ -424,7 +432,7 @@ function App() {
         <section id="projects" className={`min-h-screen w-full ${isDarkMode ? 'bg-dark-accent' : 'bg-white'} flex items-center py-20`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <h2 className={`text-3xl md:text-5xl font-bold mb-12 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-              Projects 🚀
+              Projects 📚
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -469,7 +477,7 @@ function App() {
                       <h3 className={`text-xl font-bold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Peer Tutor</h3>
                       <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>University of Pittsburgh</p>
                       <p className="text-sm text-pitt-gold mb-3">June 2024 - Present</p>
-                      <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Led 50+ sessions on algorithms & data structures using Python & Java, enhancing students' understanding and confidence. Guided students in resolving programming challenges & enhanced coding skills using VSCode.</p>
+                      <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Hosted <b>50+</b> tutoring sessions on algorithms & data structures using Python & Java, enhancing fellow students' understanding and confidence in programming. Helped better grades and preparedness for exams for almost all students.</p>
                     </div>
                   </div>
                   <div className="mx-auto md:mx-0 w-4 h-4 bg-pitt-gold rounded-full relative z-10"></div>
@@ -497,7 +505,7 @@ function App() {
                       <h3 className={`text-xl font-bold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Junior Analyst</h3>
                       <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Panther Equity</p>
                       <p className="text-sm text-pitt-gold mb-3">September 2024 - Present</p>
-                      <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Utilized Excel & financial modeling tools to assess investment opportunities, performing quantitative analysis. Prepared reports and presentations analyzing activity & trends in the stock market.</p>
+                      <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Utilized Excel & financial modeling tools to assess investment opportunities, performing quantitative analysis. Prepared reports and presentations analyzing activity & trends in the stock market, especially the technology sector.</p>
                     </div>
                   </div>
                   <div className="mx-auto md:mx-0 w-4 h-4 bg-pitt-gold rounded-full relative z-10"></div>
@@ -513,7 +521,7 @@ function App() {
                       <h3 className={`text-xl font-bold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>President</h3>
                       <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Golden Oaks Designs</p>
                       <p className="text-sm text-pitt-gold mb-3">September 2021 - June 2023</p>
-                      <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Led production to a record sales year, increasing revenue by 30% through designing best-selling wooden pens. Managed business operations within a collaborative team, overseeing product development and marketing.</p>
+                      <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Led production to a <i>record sales year</i>, increasing revenue by <b>30%</b> through designing best-selling wooden pens, pencils, night lights, and more. Managed business operations within a collaborative team, overseeing product development and marketing.</p>
                     </div>
                   </div>
                 </div>
@@ -555,6 +563,10 @@ function App() {
                   <div className={`${isDarkMode ? 'bg-dark' : 'bg-white'} w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110`}>
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" className="w-12 h-12 mb-2" alt="Python" />
                     <span className={`text-sm font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Python</span>
+                  </div>
+                  <div className={`${isDarkMode ? 'bg-dark' : 'bg-white'} w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110`}>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" className="w-12 h-12 mb-2" alt="TypeScript" />
+                    <span className={`text-sm font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>TypeScript</span>
                   </div>
                   <div className={`${isDarkMode ? 'bg-dark' : 'bg-white'} w-24 h-24 p-4 rounded-xl shadow-xl flex flex-col items-center justify-center transform transition-transform hover:scale-110`}>
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" className="w-12 h-12 mb-2" alt="HTML5" />
