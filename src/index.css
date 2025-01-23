@@ -4,6 +4,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Theme transition classes */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Light mode styles */
+.light-mode {
+  --bg-primary: #f3f4f6;
+  --bg-secondary: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+}
+
+/* Dark mode styles (default) */
+:root {
+  --bg-primary: #121212;
+  --bg-secondary: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #a3a3a3;
+}
+
 * {
   margin: 0;
   padding: 0;
