@@ -1,10 +1,6 @@
 import { Link } from 'react-scroll'
 import { useState, useEffect } from 'react'
 import { FaGithub, FaLinkedin, FaSun, FaMoon } from 'react-icons/fa6'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import profilePic from './assets/profile.jpg'
-import cathedral from './assets/cathedral.jpg'
 import './App.css'
 
 // Theme Toggle Component
@@ -155,7 +151,7 @@ function App() {
     {
       id: 1,
       title: "This Website!",
-      image: "/src/assets/webcover.png",
+      image: "/assets/webcover.png",
       github: "https://github.com/bualimov/bualimov.github.io",
       shortDescription: "My website to showcase my projects + skills.",
       fullDescription: "More often than not, I am working on backend-focused projects. In an effort to improve my frontend skills, and because a personal website is convenient to have, I put this site together utilizing the React and Vite frameworks, and the main web-building languages of HTML5 and CSS3. At my upcoming internship this summer with US Steel, I know I'll be using React, and I wanted to expand my understanding of frontend development. I aim to learn about more tools and frameworks to help me more efficiently build sites like this with more practical goals in mind.",
@@ -165,7 +161,7 @@ function App() {
     {
       id: 2,
       title: "NFL Big Data Bowl 2025",
-      image: "/src/assets/databowl_cover.png",
+      image: "/assets/databowl_cover.png",
       github: "https://github.com/bualimov/nfl_project",
       shortDescription: (
         <>
@@ -180,7 +176,7 @@ function App() {
     {
       id: 3,
       title: "Java Study Tool",
-      image: "/src/assets/javastudytool_cover.png",
+      image: "/assets/javastudytool_cover.png",
       github: "https://github.com/Ilya-Abbasian/JavaStudyTool-SteelHacks_Project/tree/MAIN3.0/public",
       shortDescription: "Interactive learning platform for Java programming concepts.",
       fullDescription: (
@@ -197,7 +193,7 @@ function App() {
     {
       id: 4,
       title: "Top Chess Players",
-      image: "/src/assets/chessplayers_cover.png",
+      image: "/assets/chessplayers_cover.png",
       github: "https://github.com/bualimov/coding_projects/tree/main",
       shortDescription: (
         <>
@@ -211,7 +207,7 @@ function App() {
     {
       id: 5,
       title: "Pittsburgh Sports",
-      image: "/src/assets/pghsports_cover.png",
+      image: "/assets/pghsports_cover.png",
       github: "https://github.com/bualimov/coding_projects/blob/main/final-notebook.ipynb",
       shortDescription: "Analyzed Pittsburgh neighborhoods to find the best for playing sports.",
       fullDescription: "This project was my first ever programming project, and one of the most fun ones. I partnered with my friend in the same class, as it was a class project. In the end, it actually ended up being a model project for future classes. We came up with four different metrics that determine which neighborhood in Pittsburgh is the best for playing sports. We analyzed population, crime, quality of the parks, and quantity of the parks in each neighborhood. Both being from the Pittsburgh area, we were able to go through this project as a duo, in contrast to everyone else who worked in groups of 3-4. It was my first time doing a proper programming project, and when I started practicing writing organized code.",
@@ -223,7 +219,7 @@ function App() {
     {
       id: 6,
       title: "Sports Injuries",
-      image: "/src/assets/sportsinjuries_cover.png",
+      image: "/assets/sportsinjuries_cover.png",
       github: "https://github.com/cmarsalko/Sports_Injuries_and_Treatment",
       shortDescription: "Website showcasing common sports-related injuries athletes should know about.",
       fullDescription: "This was a group project I worked on with my classmates - we thought this would be a clever way to sharpen our frontend programming skills while also learning more about common injuries, their treatments, and ways to prevent them. Each one of us is active so it was interesting to learn in depth about all sorts of accidents, considering we have all had a sports-related injury at some point in our lives. We built this website collectively with the basic frontend languages, without frameworks. This was also good practice with version control, since there was a total of five of us in a group.",
@@ -237,7 +233,7 @@ function App() {
     {
       id: 7,
       title: "Algorithms & Data Structures",
-      image: "/src/assets/algds_cover.png",
+      image: "/assets/algds_cover.png",
       github: "https://github.com/bualimov/cs445",
       shortDescription: "Github repository for my projects in Algorithms & Data Structures.",
       fullDescription: "Here you will find my repository for my projects I worked on in my Algorithms & Data Structures class. A lot of these consist of familiarizing myself with implementing algorithms on different data structures, studying how they work, and how they can be utilized in real-world applications. Not much interesting information here, but I'm sure I'll be adding more to this repository as I continue to work on more projects.",
@@ -254,7 +250,7 @@ function App() {
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <img 
-                src="/src/assets/logo3.png" 
+                src="/assets/logo3.png" 
                 alt="BA Logo" 
                 className={`h-8 ${isDarkMode ? 'brightness-0 invert' : 'brightness-0'}`} 
               />
@@ -334,7 +330,7 @@ function App() {
                 <div className="relative w-80 h-80 md:w-[28rem] md:h-[28rem]">
                   <div className="absolute inset-0 bg-accent-blue/40 rounded-2xl transform rotate-6"></div>
                   <img 
-                    src={profilePic} 
+                    src="/assets/profile.jpg" 
                     alt="Bakhtiyor Alimov"
                     className="relative z-10 w-full h-full object-cover rounded-2xl border-2 border-accent-blue/20 shadow-xl"
                   />
@@ -383,7 +379,7 @@ function App() {
                 <div className="relative w-72 h-96 md:w-[24rem] md:h-[32rem]">
                   <div className="absolute inset-0 bg-pitt-gold/30 rounded-2xl transform -rotate-6"></div>
                   <img 
-                    src={cathedral} 
+                    src="/assets/cathedral.jpg" 
                     alt="Cathedral of Learning"
                     className="relative z-10 w-full h-full object-cover rounded-2xl border-2 border-pitt-gold/50 shadow-xl"
                   />
