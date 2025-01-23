@@ -10,19 +10,21 @@ import './App.css'
 // Project Modal Component
 const ProjectModal = ({ project, onClose }) => {
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={onClose}>
-      <div className="bg-dark-accent rounded-xl p-8 max-w-3xl w-full mx-4 relative" onClick={e => e.stopPropagation()}>
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" onClick={onClose}>
+      <div className="bg-dark-accent rounded-xl p-8 max-w-5xl w-full relative" onClick={e => e.stopPropagation()}>
         <span
           className="absolute top-2 right-3 text-4xl text-gray-400 hover:text-red-500 transition-colors cursor-pointer leading-none"
           onClick={onClose}
         >
           ×
         </span>
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-auto max-h-[400px] object-contain rounded-lg mb-6"
-        />
+        <div className="flex justify-center mb-6">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-3/4 h-auto max-h-[350px] object-contain rounded-lg"
+          />
+        </div>
         <a
           href={project.github}
           target="_blank"
@@ -393,11 +395,11 @@ function App() {
               <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-pitt-gold/30"></div>
               
               {/* Timeline Items */}
-              <div className="space-y-12">
+              <div className="space-y-8">
                 {/* Current - Peer Tutor */}
                 <div className="flex flex-col md:flex-row items-center">
                   <div className="md:w-1/2 md:pr-8 md:text-right">
-                    <div className="bg-dark p-6 rounded-lg shadow-xl">
+                    <div className="bg-dark p-5 rounded-lg shadow-xl">
                       <h3 className="text-xl font-bold text-white mb-2">Peer Tutor</h3>
                       <p className="text-lg text-gray-300">University of Pittsburgh</p>
                       <p className="text-sm text-pitt-gold mb-3">June 2024 - Present</p>
@@ -413,7 +415,7 @@ function App() {
                   <div className="md:w-1/2 md:pr-8"></div>
                   <div className="mx-auto md:mx-0 w-4 h-4 bg-pitt-gold rounded-full relative z-10"></div>
                   <div className="md:w-1/2 md:pl-8">
-                    <div className="bg-dark p-6 rounded-lg shadow-xl">
+                    <div className="bg-dark p-5 rounded-lg shadow-xl text-left">
                       <h3 className="text-xl font-bold text-white mb-2">Certified Trainer & Shift Supervisor</h3>
                       <p className="text-lg text-gray-300">Raising Cane's</p>
                       <p className="text-sm text-pitt-gold mb-3">January 2024 - October 2024</p>
@@ -425,7 +427,7 @@ function App() {
                 {/* Junior Analyst */}
                 <div className="flex flex-col md:flex-row items-center">
                   <div className="md:w-1/2 md:pr-8 md:text-right">
-                    <div className="bg-dark p-6 rounded-lg shadow-xl">
+                    <div className="bg-dark p-5 rounded-lg shadow-xl">
                       <h3 className="text-xl font-bold text-white mb-2">Junior Analyst</h3>
                       <p className="text-lg text-gray-300">Panther Equity</p>
                       <p className="text-sm text-pitt-gold mb-3">September 2024 - Present</p>
@@ -441,7 +443,7 @@ function App() {
                   <div className="md:w-1/2 md:pr-8"></div>
                   <div className="mx-auto md:mx-0 w-4 h-4 bg-pitt-gold rounded-full relative z-10"></div>
                   <div className="md:w-1/2 md:pl-8">
-                    <div className="bg-dark p-6 rounded-lg shadow-xl">
+                    <div className="bg-dark p-5 rounded-lg shadow-xl text-left">
                       <h3 className="text-xl font-bold text-white mb-2">President</h3>
                       <p className="text-lg text-gray-300">Golden Oaks Designs</p>
                       <p className="text-sm text-pitt-gold mb-3">September 2021 - June 2023</p>
@@ -453,7 +455,7 @@ function App() {
                 {/* Salvation Army */}
                 <div className="flex flex-col md:flex-row items-center">
                   <div className="md:w-1/2 md:pr-8 md:text-right">
-                    <div className="bg-dark p-6 rounded-lg shadow-xl">
+                    <div className="bg-dark p-5 rounded-lg shadow-xl">
                       <h3 className="text-xl font-bold text-white mb-2">Volunteer Operations Manager</h3>
                       <p className="text-lg text-gray-300">Pittsburgh Salvation Army</p>
                       <p className="text-sm text-pitt-gold mb-3">August 2021 - August 2022</p>
