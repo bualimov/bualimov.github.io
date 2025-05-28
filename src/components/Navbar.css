@@ -1,0 +1,57 @@
+/* navbar component */
+.navbar {
+    display: flex; /* makes the elements line up horizontally (in this context) */
+    justify-content: space-between; /* what it sounds like */
+    height: 80px;
+    align-items: center; /* possibly already default */
+    padding: 3rem 13rem; /* top-bottom, left-right (area INSIDE, margin = OUTSIDE) */
+    background-color: #111;
+    color: #ffffff; /* text color */
+    font-size: large;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* shadow effect */
+    position: fixed; /* makes it stay at top */
+    width: 100%;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-links li {
+    margin-left: 2rem;
+}
+
+.navbar-links a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+}
+
+.navbar-logo a {
+    font-weight: bold;
+    font-size: 1.5rem; /* Makes it 50% larger than the base font size */
+    text-decoration: none;
+}
+
+/* src/components/Navbar.css */
+.navbar-logo-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-logo-img {
+    height: 40px;      /* Adjust as needed */
+    width: auto;
+    margin-right: 12px;
+  }
+  
+  .navbar-logo-text {
+    font-size: 1.5rem;   /* Adjust as needed */
+    font-weight: bold;
+    letter-spacing: 1px;
+  }

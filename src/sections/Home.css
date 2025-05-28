@@ -1,0 +1,84 @@
+.home-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #111; 
+  }
+  
+  .home-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .home-content {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  
+  .home-text {
+    flex: 1;
+    color: #fff;
+  }
+  
+  .home-text h1 {
+    font-size: 2.75rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .home-text p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .home-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .home-image img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+  
+  /* socials  */
+  .home-socials {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    justify-content: center; /* or left/right as you prefer */
+  }
+  
+  .social-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: transform 0.2s;
+  }
+  
+  .social-icon.linkedin {
+    color: #0077b5; /* LinkedIn blue */
+  }
+  
+  .social-icon.github {
+    color: #f4511e; /* GitHub orange */
+  }
+  
+  .social-icon-link:hover .social-icon {
+    transform: scale(1.15);
+  }
