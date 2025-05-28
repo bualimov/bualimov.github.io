@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     background: #111; 
+    
   }
   
   .home-container {
@@ -51,10 +52,11 @@
   
   .home-image img {
     width: 500px;
-    height: 500px;
+    height: 600px;
     object-fit: cover;
-    border-radius: 1.5rem;
+    border: 3px solid white;
     box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+
   }
   
   /* socials  */

@@ -1,0 +1,195 @@
+.experience-section {
+    min-height: 100vh;
+    background-color: #212121;
+    width: 100%;
+    position: relative;
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    padding-top: 90px;
+    padding-bottom: 250px; /*padding top and bottom adjust space between sections*/
+}
+
+.experience-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.experience-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: white;
+    text-align: left;
+}
+
+.timeline-key {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: #181818;
+    color: #fff;
+    padding: 0.7rem 1.2rem;
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    z-index: 10;
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.18);
+}
+.key {
+    display: inline-block;
+    width: 16px; height: 16px;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+}
+.key.work { background: #2196f3; }
+.key.leadership { background: #ffd700; }
+.key.project { background: #4caf50; }
+
+.timeline {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 800px;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #fff;
+    z-index: 0;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.timeline-label {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffd700;
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0.2rem 0.8rem;
+    border: 1px solid white;
+    margin-top: -1.2rem;
+}
+
+.timeline-tick {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffd700;
+    z-index: 1;
+}
+.tick-major {
+    width: 80px;
+    height: 4px;
+    margin-left: -20px;
+}
+.tick-medium {
+    width: 33px;
+    height: 3px;
+    margin-left: -18px;
+}
+.tick-minor {
+    width: 20px;
+    height: 2px;
+    margin-left: -10px;
+}
+
+.experience-box {
+    position: absolute;
+    width: 440px;
+    background: #181818;
+    color: #fff;
+    border: 3px solid #fff;
+    /* border-radius: 1rem; */
+    padding: 1.2rem 1.5rem;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
+    z-index: 2;
+    left: calc(50% + 40px);
+    transition: box-shadow 0.2s;
+}
+.experience-box.left {
+    left: auto;
+    right: calc(50% + 60px);
+    text-align: right;
+}
+.experience-box.right {
+    left: calc(50% + 60px);
+    text-align: left;
+}
+.experience-box.work { border-color: #2196f3; }
+.experience-box.leadership { border-color: #ffd700; }
+.experience-box.project { border-color: #4caf50; }
+
+.experience-box h3 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.experience-box .company {
+    font-size: 1rem;
+    color: #bdbdbd;
+    margin-bottom: 0.2rem;
+}
+.experience-box .dates {
+    font-size: 0.95rem;
+    color: #ffd700;
+    margin-bottom: 0.5rem;
+}
+.experience-box p {
+    margin: 0;
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+/* Timeline connector (dotted line from box to timeline) */
+.timeline-connector {
+    position: absolute;
+    top: 0rem; /* aligns with top of box content */
+    width: 60px; /* should match the gap between box and timeline */
+    height: 0;
+    border-top: 2px dashed #ffd700;
+    z-index: 3;
+}
+.connector-left {
+    right: -60px; /* matches the gap between box and timeline */
+}
+.connector-right {
+    left: -60px; /* matches the gap between box and timeline */
+}
+
+@media (max-width: 900px) {
+    .timeline {
+        width: 98%;
+    }
+    .experience-box, .experience-box.left, .experience-box.right {
+        position: static;
+        width: 98%;
+        margin: 1.5rem auto;
+        left: unset;
+        right: unset;
+        text-align: left;
+    }
+    .timeline-line {
+        left: 20px;
+        transform: none;
+    }
+    .timeline-label {
+        left: 20px;
+        transform: none;
+    }
+}

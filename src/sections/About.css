@@ -6,14 +6,15 @@
     min-height: 100vh; /*gives it that equal height for all sections*/
     display: flex;
     align-items: center;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+
 }
 
 .about-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    border-radius: 1.5rem;
-
     /* background-color: #111; */
 }
 

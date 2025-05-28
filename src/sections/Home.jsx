@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import cathedral from '../images/cathedral.png'
+import cover from '../images/cover.jpeg'
 
 export default function Home() {
     return (
@@ -12,8 +12,8 @@ export default function Home() {
             <div className="home-text">
               <h1>Hi, I'm Bakhtiyor! 👋</h1>
               <p>
-                SWE & Data Engineer Intern @US Steel<br />
-                Studying CS @Pitt<br />
+                SWE & Data Engineer Intern <b>@US Steel</b><br />
+                Studying CS <b>@Pitt</b><br />
                 Passionate Creator
               </p>
               <div className="home-socials">
@@ -38,8 +38,8 @@ export default function Home() {
             {/* Right side - Image */}
             <div className="home-image">
               <img 
-                src={cathedral} 
-                alt="cathy"
+                src={cover} 
+                alt="cover photo"
               />
             </div>
           </div>
