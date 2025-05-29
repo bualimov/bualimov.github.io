@@ -27,7 +27,7 @@
   overflow-x: auto;
   gap: 2rem;
   padding-bottom: 1rem;
-  box-shadow: 0 8px 8px 0 rgba(255, 255, 255, 0.18);
+  /* box-shadow: 0 16px 16px 0 rgba(255, 238, 0, 0.18); */
   border-radius: 10px;
 }
 .project-card {
@@ -40,7 +40,6 @@
   border: 2px solid #ffffff;
   padding: 0.7rem;
   margin: 0.5rem;
-  cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
   scroll-snap-align: start;
   color: white;
@@ -63,6 +62,7 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
 .language-tag {
   display: inline-block;
   border: 2px solid;
@@ -75,4 +75,19 @@
   color: #fff;
 }
 
+.card-icon {
+  display: flex;
+  justify-content: flex-end;
+}
 
+.card-icon.github {
+  height: 30px;
+  width: 30px;
+  display: block; /* just in case */
+  margin-bottom: 0.5rem;
+}
+
+.card-icon.github:hover {
+  color: #f4511e; /* GitHub orange */
+  cursor: pointer;
+}

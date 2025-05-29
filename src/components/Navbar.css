@@ -20,20 +20,6 @@
     list-style: none;
 }
 
-.navbar-links::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background: #2196f3; /* blue */
-    transform: scaleX(0);
-    transition: transform 0.3s cubic-bezier(.4,0,.2,1), opacity 0.3s;
-    opacity: 0;
-}
-
-
 .navbar-links li {
     margin-left: 2rem;
 }
@@ -41,12 +27,14 @@
 .navbar-links a {
     color: #ffffff;
     font-weight: bold;
+
 }
 
 .navbar-logo a {
     font-weight: bold;
     font-size: 1.5rem; /* Makes it 50% larger than the base font size */
     text-decoration: none;
+
 }
 
 /* src/components/Navbar.css */
@@ -64,9 +52,10 @@
   .navbar-logo-text {
     font-size: 1.5rem;   /* Adjust as needed */
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     transition: color 0.3s;
     cursor: pointer;
+    position: relative;
   }
 
 .navbar-link {
