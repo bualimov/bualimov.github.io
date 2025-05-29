@@ -39,7 +39,7 @@ export default function Home() {
             <div className="home-image">
               <img 
                 src={cover} 
-                alt="cover photo"
+                alt="cover"
               />
             </div>
           </div>

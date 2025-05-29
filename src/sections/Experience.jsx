@@ -44,7 +44,6 @@ const experiences = [
     description: 'Led shifts and trained over 30 team members, fostering a collaborative and efficient work culture. Recognized for strong leadership and fast-tracked for management opportunities.'
   },
 
-
   // Add more experiences as needed
 ];
 

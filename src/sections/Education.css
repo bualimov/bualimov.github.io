@@ -1,12 +1,10 @@
 .education-section {
   background-color: #111;
-  color: lightgray;
   width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid white;
-
+  border-top: 2px solid white;
 }
 
 .education-container {

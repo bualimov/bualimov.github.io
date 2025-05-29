@@ -1,10 +1,37 @@
 .footer {
     background-color: #111;
-    color: white;
+    color: rgb(167, 167, 167);
     padding: 1rem;
-    margin: auto;
+    margin: 0 auto;
+    border-top: 2px solid white;
+
 }
 
 .footer p {
     line-height: 2;
 }
+
+.footer-socials {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    justify-content: center; /* or left/right as you prefer */
+}
+
+.social-icon-footer {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: transform 0.2s;
+  }
+  
+  .social-icon-footer.linkedin {
+    color: #0077b5; /* LinkedIn blue */
+  }
+  
+  .social-icon-footer.github {
+    color: #f4511e; /* GitHub orange */
+  }
+  
+  .social-icon-footer-link:hover .social-icon-footer {
+    transform: scale(1.15);
+  }

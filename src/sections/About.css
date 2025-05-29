@@ -2,14 +2,11 @@
 .about-section {
     /* background-color: #212121; */
     background-color: #111;
-    color: lightgray;
     width: 100%;
     min-height: 100vh; /*gives it that equal height for all sections*/
     display: flex;
     align-items: center;
-    border-bottom: 2px solid white;
     border-top: 2px solid white;
-
 }
 
 .about-container {
