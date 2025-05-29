@@ -5,7 +5,7 @@
     justify-content: space-between; /* what it sounds like */
     height: 80px;
     align-items: center; /* possibly already default */
-    padding: 3rem 13rem; /* top-bottom, left-right (area INSIDE, margin = OUTSIDE) */
+    padding: 2rem 13rem; /* top-bottom, left-right (area INSIDE, margin = OUTSIDE) */
     background-color: #111;
     color: #ffffff; /* text color */
     font-size: large;
@@ -20,6 +20,20 @@
     list-style: none;
 }
 
+.navbar-links::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #2196f3; /* blue */
+    transform: scaleX(0);
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1), opacity 0.3s;
+    opacity: 0;
+}
+
+
 .navbar-links li {
     margin-left: 2rem;
 }
@@ -27,10 +41,6 @@
 .navbar-links a {
     color: #ffffff;
     font-weight: bold;
-}
-
-.navbar-links a:hover {
-    text-decoration: underline;
 }
 
 .navbar-logo a {
@@ -55,4 +65,63 @@
     font-size: 1.5rem;   /* Adjust as needed */
     font-weight: bold;
     letter-spacing: 1px;
+    transition: color 0.3s;
+    cursor: pointer;
   }
+
+.navbar-link {
+  position: relative;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: #2196f3;
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1), opacity 0.3s;
+  opacity: 0;
+}
+
+.navbar-link:hover,
+.navbar-link:focus {
+  color: #2196f3;
+}
+
+.navbar-link:hover::after,
+.navbar-link:focus::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.navbar-logo-text::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background: #2196f3;
+    transform: scaleX(0);
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1), opacity 0.3s;
+    opacity: 0;
+}
+
+.navbar-logo-text:hover,
+.navbar-logo-text:focus {
+    color: #2196f3;
+}
+
+.navbar-logo-text:hover::after,
+.navbar-logo-text:focus::after {
+    transform: scaleX(1);
+    opacity: 1;
+}

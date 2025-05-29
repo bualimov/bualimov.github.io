@@ -1,0 +1,10 @@
+.footer {
+    background-color: #111;
+    color: white;
+    padding: 1rem;
+    margin: auto;
+}
+
+.footer p {
+    line-height: 2;
+}

@@ -32,8 +32,7 @@
   width: 100%;
   align-items: stretch;
   justify-content: flex-start;
-  margin-top: 4rem;
-  gap: 0rem; /* moves text left or right */
+  margin-top: 3rem;
 }
 
 .education-image {
@@ -45,8 +44,39 @@
   margin: 0;
 }
 
+.education-right {
+  flex: 2 1 60%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: -5rem;
+}
+
+.education-small-images {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.small-image {
+  width: 180px;
+  height: 240px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
+  background: #222;
+  align-self: flex-end;
+  margin: 1rem;
+}
+
 .education-image img {
-  max-width: 90%;
+  max-width: 100%;
   max-height: 530px;
   border: 3px solid #fff;
   box-shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
@@ -59,11 +89,10 @@
 .education-text {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* flex: 2 1 60%; */
-  gap: 2rem;
+  gap: 1rem;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; moved second column up top, by commenting this out*/ 
   min-height: 260px;
   background: transparent;
   color: white; 
@@ -76,10 +105,16 @@
 .education-col {
   display: flex;
   flex-direction: column;
+  min-width: 280px;  /* Ensures minimum width for text */
+  flex: 1;  /* Takes equal space */
 }
 
+.education-col:first-child {
+  flex: 1.2;  /* Slightly wider for the longer content */
+}
+
+
 .education-col h3 {
-  /* margin-top: 1.5rem; */
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
   font-weight: bold;
@@ -134,4 +169,26 @@
   .education-text {
     padding: 1.2rem 0.7rem;
   }
+}
+
+/* Small images container */
+.small-images {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.small-images img {
+  width: 180px;
+  height: 240px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
+  background: #222;
+  margin-top: 2rem;
+}
+
+/* Adjust position of second image */
+.small-images img:last-child {
+  margin-top: 4rem;  /* Move second image down by 2rem */
 }

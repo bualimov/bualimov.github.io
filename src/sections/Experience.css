@@ -1,13 +1,14 @@
 .experience-section {
     min-height: 100vh;
-    background-color: #212121;
+    /* background-color: #212121; */
+    background-color: #111;
     width: 100%;
     position: relative;
     padding: 3rem 0;
     display: flex;
     align-items: center;
     padding-top: 90px;
-    padding-bottom: 250px; /*padding top and bottom adjust space between sections*/
+    border-bottom: 2px solid white;
 }
 
 .experience-container {
@@ -76,7 +77,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    color: #ffd700;
+    color: #ffffff;
     font-size: 1.2rem;
     font-weight: bold;
     z-index: 2;
@@ -90,18 +91,14 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    background: #ffd700;
+    background: #ffffff;
     z-index: 1;
 }
-.tick-major {
-    width: 80px;
-    height: 4px;
-    margin-left: -20px;
-}
+
 .tick-medium {
     width: 33px;
     height: 3px;
-    margin-left: -18px;
+    margin-left: -17px;
 }
 .tick-minor {
     width: 20px;
@@ -111,10 +108,10 @@
 
 .experience-box {
     position: absolute;
-    width: 440px;
+    width: 540px;
     background: #181818;
     color: #fff;
-    border: 3px solid #fff;
+    border: 1.5px solid #fff;
     /* border-radius: 1rem; */
     padding: 1.2rem 1.5rem;
     box-shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
@@ -136,14 +133,14 @@
 .experience-box.project { border-color: #4caf50; }
 
 .experience-box h3 {
-    margin: 0 0 0.3rem 0;
+    /* margin: 0 0 0.3rem 0; */
     font-size: 1.2rem;
     font-weight: bold;
 }
 .experience-box .company {
     font-size: 1rem;
     color: #bdbdbd;
-    margin-bottom: 0.2rem;
+    /* margin-bottom: 0.2rem; */
 }
 .experience-box .dates {
     font-size: 0.95rem;

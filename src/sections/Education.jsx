@@ -1,6 +1,8 @@
 import React from 'react';
 import './Education.css';
 import cathedral from '../images/cathedral.png';
+import sign from '../images/pittsign.jpeg';
+import roc from '../images/roc.jpeg'
 
 export default function Education() {
   return (
@@ -9,11 +11,12 @@ export default function Education() {
         <h2 className="education-title">Education 👨‍🎓</h2>
         <div className="education-content">
           <div className="education-image">
-            <img src={cathedral} alt="Cathedral of Learning" />
+            <img src={sign} alt="sign" />
           </div>
 
-          <div className="education-text">
-            <div className="education-col education-col-left">
+          <div className="education-right">
+            <div className="education-text">
+              <div className="education-col">
                 <h3>University of Pittsburgh 📚</h3>
                 <div>B.S. in Computer Science <i>(grad. April 2027)</i></div>
                 <div>Minor in Economics</div>
@@ -31,19 +34,27 @@ export default function Education() {
                 <div>Social Implications in Computing</div>
                 <div>Leadership</div>
                 <div>Economics</div>
-            </div>
+              </div>
 
-            <div className="education-col education-col-left">
+              <div className="education-col">
                 <h3>Clubs + Extracurriculars 📈</h3>
                 <div>Computer Science Club</div>
                 <div>Management Consulting Club</div>
-                <div>Panther Equity (Investment Fund)</div>
+                <div>Panther Equity <i>(Investment Fund)</i></div>
                 <div>Chess Club</div>
-            </div> 
-          </div> {/*text*/}
+        
+                {/* Small images below the text */}
+                <div className="small-images">
+                  <img src={roc} alt="roc" />
+                  <img src={cathedral} alt="cathy" />
+                </div>
+              </div>
+            </div>
 
-        </div> {/*container*/}
-      </div> {/*content*/}
+
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

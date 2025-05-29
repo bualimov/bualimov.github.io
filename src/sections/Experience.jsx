@@ -3,39 +3,57 @@ import './Experience.css';
 
 // Experience data, with dates in MM-YYYY format
 const experiences = [
+     {
+        type: 'work',
+        title: 'SWE & Data Engineer Intern',
+        company: "U.S. Steel",
+        start: '05-2025',
+        end: 'present',
+        description: 'Designed a real-time React UI and built robust PySpark pipelines to monitor and analyze blast furnace data. Streamlined ETL workflows and accelerated deployment with CI/CD in Azure DevOps, improving both safety and delivery speed.'
+    },
+    {
+        type: 'leadership',
+        title: 'Resident Assistant (RA) - Leadership LLC',
+        company: "University of Pittsburgh",
+        start: '03-2025',
+        end: 'present',
+        description: 'Created an inclusive, leadership-driven community for 30+ residents through events, mentorship, and active engagement. Promoted well-being and cooperation while resolving issues and ensuring a respectful environment.'
+    },
+    {
+        type: 'work',
+        title: 'Junior Analyst',
+        company: 'Panther Equity',
+        start: '09-2024',
+        end: '05-2025',
+        description: 'Conducted financial modeling & equity research contributing to $325K+ in investment recommendations. Collaborated on reports and market analysis with analysts to drive strategic insights.'
+      },
+    {
+        type: 'work',
+        title: 'Peer Tutor',
+        company: "University of Pittsburgh",
+        start: '06-2024',
+        end: 'present',
+        description: 'Tutored students in programming and algorithms, hosting 50+ sessions focused on Python and Java. Helped students boost performance and confidence by guiding them through challenges and coding best practices.'
+    },
   {
     type: 'work',
     title: 'Certified Trainer & Shift Supervisor',
     company: "Raising Cane's",
     start: '01-2024',
     end: '10-2024',
-    description: 'Identified as a high-potential employee and fast-tracked for a managerial role. Routinely trained team members on crew member tasks while maintaining operational efficiency and customer satisfaction.'
+    description: 'Led shifts and trained over 30 team members, fostering a collaborative and efficient work culture. Recognized for strong leadership and fast-tracked for management opportunities.'
   },
-  {
-    type: 'work',
-    title: 'Junior Analyst',
-    company: 'Panther Equity',
-    start: '09-2024',
-    end: '05-2025',
-    description: 'Utilized Excel & financial modeling tools to assess investment opportunities, performing quantitative analysis. Prepared reports and presentations analyzing activity & trends in the stock market, especially the technology sector.'
-  },
-  {
-    type: 'leadership',
-    title: 'President',
-    company: 'Golden Oaks Designs',
-    start: '08-2023',
-    end: '05-2024',
-    description: 'Led the club, organized tournaments, and increased membership by 30%. Fostered a welcoming environment for players of all skill levels.'
-  },
+
+
   // Add more experiences as needed
 ];
 
 // Color mapping for experience types
-const typeColors = {
-  work: '#2196f3',
-  leadership: '#ffd700',
-  project: '#4caf50',
-};
+// const typeColors = {
+//   work: '#2196f3',
+//   leadership: '#ffd700',
+//   project: '#4caf50',
+// };
 
 // Helper to get months between two MM-YYYY dates
 function getMonthDiff(start, end) {
@@ -111,11 +129,7 @@ export default function Experience() {
     <section id="experience" className="experience-section">
         <div className="experience-container">
           <h2 className="experience-title">Experience 💼</h2>
-          <div className="timeline-key">
-            <span className="key work"></span> Work
-            <span className="key leadership"></span> Leadership
-            <span className="key project"></span> Project
-          </div>
+
           <div className="timeline" style={{ height: timelineHeight }}>
             {/* Timeline line */}
             <div className="timeline-line"></div>
@@ -129,7 +143,7 @@ export default function Experience() {
                 side={i % 2 === 0 ? 'left' : 'right'}
                 style={{
                   top: getTop(exp.start),
-                  borderColor: typeColors[exp.type] || '#fff',
+                  borderColor: '#fff',
                 }}
               />
             ))}

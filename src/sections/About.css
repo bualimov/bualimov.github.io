@@ -1,6 +1,7 @@
 /* about section */
 .about-section {
-    background-color: #212121;
+    /* background-color: #212121; */
+    background-color: #111;
     color: lightgray;
     width: 100%;
     min-height: 100vh; /*gives it that equal height for all sections*/

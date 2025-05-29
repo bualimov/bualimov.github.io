@@ -17,7 +17,9 @@ function App() {
       <About />
       <Education />
       <Experience />
-
+      {/* <Projects />
+      <Skills /> */}
+      <Footer />
     </div>
   );
 }
