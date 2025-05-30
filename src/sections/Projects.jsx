@@ -8,6 +8,8 @@ import javastudytoolcover from '../images/javastudytool_cover.png';
 import marchmaniacover from '../images/march-mania-cover.png';
 import pghsportscover from '../images/pghsports_cover.png';
 import sportsinjuriescover from '../images/sportsinjuries_cover.png';
+// import website from '';
+
 
 //   // Languages & Frameworks
 //   { name: 'Java', color: '#007396' },
@@ -49,6 +51,19 @@ import sportsinjuriescover from '../images/sportsinjuries_cover.png';
 
 // projects data
 const myprojects = [
+    {
+        cover: marchmaniacover,
+        title: 'My Website!',
+        short: 'Designed and built a personal website using React, Vite, HTML5, and CSS3 to deepen frontend development knowledge. Used the project to experiment with clean, functional UI design and improve fluency with modern web development tools.',
+        
+        languages: [
+            { name: 'React', color: '#61DAFB' },
+            { name: 'HTML5', color: '#E34F26' },
+            { name: 'CSS3', color: '#1572B6' },
+            { name: 'JavaScript', color: '#F7DF1E' },
+        ],
+        repo: 'https://github.com/bualimov/bualimov.github.io'
+    },
     {
         cover: marchmaniacover,
         title: 'March Machine Learning Mania',
