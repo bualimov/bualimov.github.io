@@ -49,6 +49,11 @@
   display: flex;
   justify-content: center;
   gap: 2.5rem;
+  margin-bottom: 2.2rem;
+}
+
+.skills-row:last-child {
+  margin-bottom: 0;
 }
 
 .skills-row.odd {
