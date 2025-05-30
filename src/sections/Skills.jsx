@@ -2,7 +2,7 @@
 import React from 'react';
 import './Skills.css'
 import { FaPython, FaJava, FaJs, FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaDatabase, FaGitAlt, FaLinux } from 'react-icons/fa';
-import { SiCplusplus, SiMongodb, SiPandas, SiNumpy, SiScikitlearn, SiTableau, SiApachehive, SiApachekafka, SiJupyter, SiYarn, SiOracle, SiSelenium, SiYaml, SiKedro, SiPlotly, SiHive, SiPytorch, SiTensorflow } from 'react-icons/si';
+import { SiCplusplus, SiMongodb, SiPandas, SiNumpy, SiScikitlearn, SiTableau, SiJupyter, SiOracle, SiSelenium, SiYaml, SiKedro, SiPlotly, SiHive } from 'react-icons/si';
 
 const skills = [
     // Languages

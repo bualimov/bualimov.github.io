@@ -1,17 +1,16 @@
 /* navbar component */
 .navbar {
     z-index: 100;
-    display: flex; /* makes the elements line up horizontally (in this context) */
-    justify-content: space-between; /* what it sounds like */
+    display: flex;
+    justify-content: space-between;
     height: 80px;
-    align-items: center; /* possibly already default */
-    padding: 2rem 13rem; /* top-bottom, left-right (area INSIDE, margin = OUTSIDE) */
+    align-items: center;
+    padding: 2rem 13rem;
     background-color: #111;
-    color: #ffffff; /* text color */
+    color: rgb(230, 230, 230);
     font-size: large;
-
-    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2); /* shadow effect */
-    position: fixed; /* makes it stay at top */
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+    position: fixed;
     width: 100%;
 }
 
@@ -25,38 +24,30 @@
 }
 
 .navbar-links a {
-    color: #ffffff;
+    color: rgb(230, 230, 230);
     font-weight: bold;
-
 }
 
-.navbar-logo a {
-    font-weight: bold;
-    font-size: 1.5rem; /* Makes it 50% larger than the base font size */
-    text-decoration: none;
-
-}
-
-/* src/components/Navbar.css */
 .navbar-logo-group {
     display: flex;
     align-items: center;
-  }
-  
-  .navbar-logo-img {
-    height: 40px;      /* Adjust as needed */
+}
+
+.navbar-logo-img {
+    height: 40px; 
     width: auto;
     margin-right: 12px;
-  }
-  
-  .navbar-logo-text {
-    font-size: 1.5rem;   /* Adjust as needed */
+    color: rgb(230, 230, 230);
+}
+
+.navbar-logo-text {
+    font-size: 1.5rem; 
     font-weight: bold;
     letter-spacing: 0.5px;
     transition: color 0.3s;
     cursor: pointer;
     position: relative;
-  }
+}
 
 .navbar-link {
   position: relative;
@@ -113,4 +104,14 @@
 .navbar-logo-text:focus::after {
     transform: scaleX(1);
     opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 1rem 1.2rem;
+    height: 60px;
+  }
+  .navbar-links {
+    display: none !important;
+  }
 }

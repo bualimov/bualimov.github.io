@@ -1,60 +1,19 @@
 import React from 'react';
 import './Projects.css';
 import { FaGithub } from 'react-icons/fa';
-import algdscover from '../images/algds_cover.png';
 import chessplayerscover from '../images/chessplayers_cover.png';
 import dentcover from '../images/dent_cover.png';
 import javastudytoolcover from '../images/javastudytool_cover.png';
 import marchmaniacover from '../images/march-mania-cover.png';
 import pghsportscover from '../images/pghsports_cover.png';
-import sportsinjuriescover from '../images/sportsinjuries_cover.png';
-// import website from '';
-
-
-//   // Languages & Frameworks
-//   { name: 'Java', color: '#007396' },
-//   { name: 'Python', color: '#3572A5' },
-//   { name: 'React', color: '#61DAFB' },
-//   { name: 'HTML5', color: '#E34F26' },
-//   { name: 'CSS3', color: '#1572B6' },
-//   { name: 'JavaScript', color: '#F7DF1E' },
-//   { name: 'C++', color: '#00599C' },
-
-//   // Data Engineering & Analysis
-//   { name: 'Pandas', color: '#150458' },
-//   { name: 'NumPy', color: '#013243' },
-//   { name: 'Spark', color: '#E25A1C' },
-//   { name: 'PySpark', color: '#B37400' },
-//   { name: 'Matplotlib', color: '#11557C' },
-//   { name: 'Plotly', color: '#3F4F75' },
-//   { name: 'Kedro', color: '#08D4BE' },
-//   { name: 'Tableau', color: '#E97627' },
-//   { name: 'Hive', color: '#FDEE21' },
-//   { name: 'Parquet', color: '#221F1F' },
-//   { name: 'SQL', color: '#336791' },
-
-//   // Cloud & DevOps
-//   { name: 'Azure Devops', color: '#0078D7' },
-//   { name: 'Apache Airflow', color: '#017CEE' },
-//   { name: 'Oracle Cloud', color: '#F80000' },
-//   { name: 'Bash', color: '#4EAA25' },
-//   { name: 'YAML', color: '#CB171E' },
-//   { name: 'Conda', color: '#44A833' },
-//   { name: 'Git', color: '#F05032' },
-//   { name: 'Toad', color: '#73C02C' }, // approximate based on branding
-
-//   // Systems & Misc
-//   { name: 'MIPS Assembly', color: '#00427A' }, // approximate (not standardized)
-//   { name: 'ETL/ELT Pipelines', color: '#FF6D00' }, // conceptual (representing data flow)
-//   { name: 'Metadata Management', color: '#8E24AA' }, // conceptual (purple for data-related tools)
-//   { name: 'Selenium', color: '#43B02A' }
+import webcover from '../images/webcover.png';
 
 // projects data
 const myprojects = [
     {
-        cover: marchmaniacover,
+        cover: webcover,
         title: 'My Website!',
-        short: 'Designed and built a personal website using React, Vite, HTML5, and CSS3 to deepen frontend development knowledge. Used the project to experiment with clean, functional UI design and improve fluency with modern web development tools.',
+        short: 'Designed and built a personal website using React, HTML5, CSS3, and JS to deepen frontend development knowledge. Used the project to experiment with clean, functional UI design and improve fluency with modern web development tools.',
         
         languages: [
             { name: 'React', color: '#61DAFB' },
