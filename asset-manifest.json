@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.890f428a.css",
+    "main.js": "/static/js/main.28d51154.js",
+    "static/js/453.da484a5f.chunk.js": "/static/js/453.da484a5f.chunk.js",
+    "static/media/cover.jpeg": "/static/media/cover.6e8c6c70739e8501554e.jpeg",
+    "static/media/roc.jpeg": "/static/media/roc.a532b1bcce4300c6861d.jpeg",
+    "static/media/webcover.png": "/static/media/webcover.3386be67f55d7cd8d09b.png",
+    "static/media/pittsign.jpeg": "/static/media/pittsign.b52fd785c63c7bdac0f8.jpeg",
+    "static/media/cathedral.png": "/static/media/cathedral.6e5dc60be0df2643be79.png",
+    "static/media/dent_cover.png": "/static/media/dent_cover.abe4ed8cd9441fcb7bdb.png",
+    "static/media/pghsports_cover.png": "/static/media/pghsports_cover.ec203a61570d3f1ed1fd.png",
+    "static/media/chessplayers_cover.png": "/static/media/chessplayers_cover.67b289953ccccf95a4f4.png",
+    "static/media/march-mania-cover.png": "/static/media/march-mania-cover.678c4e6e531d08b11a7c.png",
+    "static/media/javastudytool_cover.png": "/static/media/javastudytool_cover.b0ec1e99268653290684.png",
+    "static/media/initials.png": "/static/media/initials.88c31c4c7d35d9142451.png",
+    "index.html": "/index.html",
+    "main.890f428a.css.map": "/static/css/main.890f428a.css.map",
+    "main.28d51154.js.map": "/static/js/main.28d51154.js.map",
+    "453.da484a5f.chunk.js.map": "/static/js/453.da484a5f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.890f428a.css",
+    "static/js/main.28d51154.js"
+  ]
+}
