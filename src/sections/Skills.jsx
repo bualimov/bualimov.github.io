@@ -1,8 +1,8 @@
 // JSX for skills section
 import React from 'react';
 import './Skills.css'
-import { FaPython, FaJava, FaJs, FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaDatabase, FaGitAlt, FaLinux } from 'react-icons/fa';
-import { SiCplusplus, SiMongodb, SiPandas, SiNumpy, SiScikitlearn, SiTableau, SiJupyter, SiOracle, SiSelenium, SiYaml, SiKedro, SiPlotly, SiHive } from 'react-icons/si';
+import { FaPython, FaJava, FaJs, FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaDatabase, FaGitAlt, FaLinux, FaVuejs } from 'react-icons/fa';
+import { SiCplusplus, SiMongodb, SiPandas, SiNumpy, SiScikitlearn, SiTableau, SiJupyter, SiOracle, SiSelenium, SiYaml, SiKedro, SiPlotly, SiHive, SiFastapi } from 'react-icons/si';
 
 const skills = [
     // Languages
@@ -13,7 +13,9 @@ const skills = [
     { icon: <FaHtml5 />, name: 'HTML5' },
     { icon: <FaCss3Alt />, name: 'CSS3' },
     { icon: <FaReact />, name: 'React' },
+    { icon: <FaVuejs />, name: 'Vue' },
     { icon: <FaNodeJs />, name: 'Node.js' },
+    { icon: <SiFastapi />, name: 'FastAPI' },
     { icon: <FaDatabase />, name: 'SQL' },
 
     // Data Engineering & Analysis

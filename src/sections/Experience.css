@@ -82,12 +82,12 @@
 
 .experience-box {
     position: absolute;
-    width: 540px;
+    width: 640px;
     background: #181818;
     color: rgb(230, 230, 230);
     border: 1.5px solid rgb(230, 230, 230);
     /* border-radius: 1rem; */
-    padding: 1.2rem 1.5rem;
+    padding: 0.6rem 1.5rem;
     box-shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
     z-index: 2;
     left: calc(50% + 40px);
@@ -95,33 +95,34 @@
 }
 .experience-box.left {
     left: auto;
-    right: calc(50% + 60px);
+    right: calc(50% + 70px);
     text-align: right;
 }
 .experience-box.right {
-    left: calc(50% + 60px);
+    left: calc(50% + 70px);
     text-align: left;
 }
 
 .experience-box h3 {
-    /* margin: 0 0 0.3rem 0; */
-    font-size: 1.2rem;
+    margin: 0 0 0.2rem 0;
+    font-size: 1.15rem;
     font-weight: bold;
     color: rgb(230, 230, 230);
 }
 .experience-box .company {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #bdbdbd;
-    /* margin-bottom: 0.2rem; */
+    margin-bottom: 0.1rem;
 }
 .experience-box .dates {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #ffd700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 }
 .experience-box p {
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
     color: rgb(230, 230, 230);
 }
 
@@ -129,16 +130,16 @@
 .timeline-connector {
     position: absolute;
     top: 0rem; /* aligns with top of box content */
-    width: 60px; /* should match the gap between box and timeline */
+    width: 70px; /* should match the gap between box and timeline */
     height: 0;
     border-top: 2px dashed #ffd700;
     z-index: 3;
 }
 .connector-left {
-    right: -60px; /* matches the gap between box and timeline */
+    right: -70px; /* matches the gap between box and timeline */
 }
 .connector-right {
-    left: -60px; /* matches the gap between box and timeline */
+    left: -70px; /* matches the gap between box and timeline */
 }
 
 @media (max-width: 900px) {

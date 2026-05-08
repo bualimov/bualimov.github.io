@@ -28,9 +28,9 @@ export default function Home() {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
                         >
-                            SWE & Data Engineer Intern <b>@US Steel</b><br />
                             Studying CS <b>@Pitt</b><br />
-                            Passionate Creator
+                            SWE Intern <b>@US Steel</b><br />
+                            Tech Consulting Intern <b>@EY</b><br />
                         </motion.p>
                         <motion.div 
                             className="home-socials"

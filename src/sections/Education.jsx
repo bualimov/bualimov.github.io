@@ -26,7 +26,13 @@ export default function Education() {
                 <h3>Coursework 📝</h3>
                 <div>Programming</div>
                 <div>Algorithms & Data Structures</div>
-                <div>Math Foundations in Machine Learning</div>
+                <div>Software Engineering</div>
+                <div>Artificial Intelligence</div>
+                <div>Operating Systems</div>
+                <div>Math Foundations in ML</div>
+                <div>Web Development</div>
+                <div>Networks and Data Communication</div>
+                <div>Data Science</div>
                 <div>Discrete Structures</div>
                 <div>Formal Methods in CS</div>
                 <div>Computer Org. & Assembly Language</div>

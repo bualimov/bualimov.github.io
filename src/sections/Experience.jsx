@@ -3,13 +3,21 @@ import './Experience.css';
 
 // Experience data, with dates in MM-YYYY format
 const experiences = [
+    {
+        type: 'work',
+        title: 'Tech Consulting Intern',
+        company: "Ernst & Young",
+        start: '06-2026',
+        end: '08-2026',
+        description: 'Coming soon!'
+    },
      {
         type: 'work',
         title: 'SWE & Data Engineer Intern',
         company: "U.S. Steel",
         start: '05-2025',
         end: 'present',
-        description: 'Designed a real-time React UI and built robust PySpark pipelines to monitor and analyze blast furnace data. Streamlined ETL workflows and accelerated deployment with CI/CD in Azure DevOps, improving both safety and delivery speed.'
+        description: 'Designed a real-time React UI, developed backend APIs, and built robust PySpark pipelines to monitor and analyze blast furnace data. Streamlined ETL workflows and accelerated deployment with CI/CD in Azure DevOps, improving both safety and delivery speed.'
     },
     {
         type: 'leadership',
@@ -17,7 +25,7 @@ const experiences = [
         company: "University of Pittsburgh",
         start: '03-2025',
         end: 'present',
-        description: 'Created an inclusive, leadership-driven community for 30+ residents through events, mentorship, and active engagement. Promoted well-being and cooperation while resolving issues and ensuring a respectful environment.'
+        description: 'Created an inclusive, leadership-driven community for 50+ residents through events, mentorship, and active engagement. Promoted well-being and cooperation while resolving issues and ensuring a respectful environment.'
     },
     {
         type: 'work',
@@ -63,9 +71,9 @@ function getMonthDiff(start, end) {
 
 // Timeline range (most recent at top)
 const timelineStart = '06-2023'; // oldest
-const timelineEnd = '07-2025';   // most recent
+const timelineEnd = '12-2026';   // most recent
 const totalMonths = getMonthDiff(timelineStart, timelineEnd);
-const timelineHeight = 800; // px
+const timelineHeight = 1000; // px (increased to accommodate 2026)
 const pxPerMonth = timelineHeight / totalMonths;
 
 // Get vertical position for a date (inverted for most recent at top)
